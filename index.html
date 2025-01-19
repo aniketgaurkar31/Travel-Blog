@@ -115,6 +115,7 @@
         }
 
         .gallery img:hover {
+            
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
@@ -144,6 +145,44 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* new style */
+        .image-container {
+            position: relative;
+            width: 100%; /* Adjust as needed */
+            height: 100%; /* Adjust as needed */
+            overflow: hidden;
+          }
+      
+          .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            
+          }
+      
+          .image-container .hover-text {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+            color: white;
+            font-size: 1.5em;
+            font-family: 'Georgia', serif;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+      
+          .image-container:hover .hover-text {
+            opacity: 1;
+          }
     </style>
 </head>
 <body>
@@ -172,12 +211,18 @@
     
 
     <section class="gallery">
-        <a href="http://127.0.0.1:5500/GroupProject/subpage.html"><img src="./goa.jpg" alt="Goa">Goa</a>
-        <img src="./kokan.jpg" alt="Kokan">
-        <img src="./spiti.jpg" alt="Spiti">
-       <a href="./sub1.html"> <img src="./pondicherry.jpg" alt="Cultural Escape"></a>
-        <img src="beach.jpg" alt="Wildlife Adventure">
-        <img src="beach2.jpg" alt="Desert Dunes">
+        <a href="http://127.0.0.1:5500/GroupProject/subpage.html"><div class="image-container">
+            <img src="./goa.jpg" alt="Placeholder Image">
+            <div class="hover-text">Chalo Chale </div>
+          </div></a>
+        <a href="./Ankush/Travel.html"><img src="./spiti.jpg" alt="Kokan"></a>
+        <a><img src="./kokan.jpg" alt="Spiti"></a>
+       <a href="./sub1.html"> <img  src="./pudducherry.jpg" alt="Cultural Escape"></a>
+        <a><img  src="./zanskar.jpg" alt="zanskar"></a>
+        <a href="www.google.com"><div class="image-container">
+            <img src="./Explore.jpg" alt="Placeholder Image">
+            <div class="hover-text">Explore More -> </div>
+          </div></a>
     </section>
 
     <footer>

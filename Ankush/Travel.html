@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Alpine Creative</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap; /* Makes it responsive */
+          }
+      
+          .image {
+            flex: 1;
+           
+          }
+      
+          .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+      
+          .info {
+            flex: 2;
+            max-width: 600px;
+          }
+      
+          .info h1 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: #333;
+          }
+      
+          .info p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+          }
+      
+          @media (max-width: 768px) {
+            .container {
+              flex-direction: column; /* Stacks content on smaller screens */
+              text-align: center;
+            }
+      
+            .image, .info {
+              max-width: 100%;
+            }
+          }
+      
+          .container1 {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px;
+              gap: 10px;
+              max-width: 1200px;
+              margin: auto;
+              flex-wrap: wrap; /* Makes it responsive */
+            }
+        
+            .info1 {
+              flex: 2;
+              max-width: 600px;
+            }
+        
+            .info1 h1 {
+              margin-top: 0;
+              font-size: 2rem;
+              color: #333;
+            }
+        
+            .info1 p {
+              font-size: 1rem;
+              line-height: 1.6;
+              color: #555;
+            }
+        
+            .image1 {
+              flex: 1;
+              
+            }
+        
+            .image1 img {
+              width: 100%;
+              height: auto;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            @media (max-width: 768px) {
+              .container1 {
+                flex-direction: column-reverse; /* Stacks image below text on smaller screens */
+                text-align: center;
+              }
+        
+              .info1, .image1 {
+                max-width: 100%;
+              }
+            }
+
+        .header {
+            text-align: center;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #333;
+            margin: 40px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #DDD;
+            border-bottom: 1px solid #DDD;
+            padding: 15px 0;
+            background-color: #FAF9F5;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            margin: 0 20px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 0 20px;
+            background-color: #e8ece6;
+        }
+
+        .content h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .content h3 {
+          font-family: 'Libre Baskerville', serif;
+          font-size: 1.9rem;
+          font-weight: 400;
+          color: #333;
+          margin-bottom: 30px;
+      }
+
+        .content img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .content p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin: 20px auto;
+            max-width: 700px;
+            color: #555;
+        }
+
+        .additional-content {
+            margin: 40px auto;
+            max-width: 950px;
+            padding: 0 20px;
+        }
+
+        .photogallery{
+            margin: 40px auto;
+            
+            padding: 0 20px;
+        }
+        
+        .photogallery h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+
+        .additional-content h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .photo-text-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        .photo-text-item {
+            width: calc(33% - 20px);
+            text-align: center;
+        }
+
+        .photo-text-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .photo-text-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-text-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-text-item p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Footer Styles */
+.footer {
+  background-color: #072540;
+  color: #fff;
+  padding-top: -20rem;
+ 
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-logo h2 {
+    padding-bottom: 0.5rem;
+  color: #FFC72C;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.social-links a {
+  margin-right: 10px;
+  padding: 0.7rem;
+  color: #fff;
+  font-size: 3rem;
+  justify-content: space-evenly;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #FFC72C;
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  color: #FF6F61;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #FFC72C;
+}
+
+.footer-bottom {
+    align-items: center;
+  text-align: center;
+  
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-bottom .heart {
+  color: #FF6F61;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+}
+
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #FFF;
+            border-top: 1px solid #DDD;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .cookie-banner button {
+            background-color: #007BFF;
+            color: #FFF;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .cookie-banner button:hover {
+            background-color: #0056b3;
+        }
+
+        #infoSec{
+            background-color: #ffffff;
+            text-align: center;
+            font-size: 10rem;
+            border-radius: 5rem;
+        }
+
+        
+       
+    </style>
+</head>
+<br>
+
+    <div class="header">The Cold Desert in the Himalayas </div>
+
+    
+
+    <div class="content">
+        <h2>Spiti Valley</h2>
+        <a href="paris.html">
+            <img src="./Images/SpitiValley.jpg" alt="Paris skyline">
+        </a>
+        <p>
+          A Spiti Valley road trip or bike trip is actually a dream. The landscape changes as you travel from one region to the other, the monasteries loom in the horizon, there are rivers to cross and the stark barrenness of the land will leave you with nothing but wonder.<br>
+
+          We had been planning our Spiti Valley road trip for a long time. The first time we visited Ladakh, I knew that I had to visit Spiti. Well, the trip happened only a few days back, but it was worth the wait. <br>      
+          So, if you are planning for a Spiti Valley road trip and are a bit clueless about what to do, you are in the right place. This travel guide will try to answer your most common queries about Spiti Valley and some more. Hope this helps you plan a perfect trip to Spiti Valley. </p>
+    </div>
+
+    <div class="additional-content">
+        <h3>Destinations To Explore</h3>
+        <div class="photo-text-container">
+            <div class="photo-text-item">
+                <a href="#section1">
+                    <img src="./Images/Shimla.jpg" alt="Mud">
+                </a>
+                <p>Shimla</p>
+            </div>
+            <div class="photo-text-item">
+              <a href="#section2">
+                  <img src="./Images/Chitkul.jpg" alt="Mud">
+              </a>
+              <p>Chitkul</p>
+          </div>
+          <div class="photo-text-item">
+            <a href="#section3">
+                <img src="./Images/Tabo.jpg" alt="Mud">
+            </a>
+            <p>Tabo</p>
+        </div>
+        <div class="photo-text-item">
+          <a href="#section4">
+              <img src="./Images/Kaza Updated.jpg" alt="Mud">
+          </a>
+          <p>Kaza</p>
+      </div>
+      <div class="photo-text-item">
+        <a href="#section5">
+            <img src="./Images/Key Monestry.jpg" alt="Mud">
+        </a>
+        <p>Key Monestry</p>
+    </div>
+    <div class="photo-text-item">
+      <a href="#section6">
+          <img src="./Images/Hikkim.jpg" alt="Mud">
+      </a>
+      <p>Hikkim</p>
+  </div>
+  <div class="photo-text-item">
+    <a href="#section7">
+        <img src="./Images/Gue Villege.jpg" alt="Mud">
+    </a>
+    <p>Gue Villege</p>
+</div>
+            <div class="photo-text-item">
+                <a href="#section8">
+                    <img src="./Images/Chicham Bridge.jpg" alt="Cityscape">
+                </a>
+                <p>Chicham Bridge</p>
+            </div>
+            <div class="photo-text-item">
+                <a href="#section9">
+                    <img src="./Images/Chandratal.jpg" alt="Mountain view">
+                </a>
+                <p>Chadratal Lake</p>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="section1">
+        <h3>Shimla: Gateway to the Himalayas </h3>
+        <a href="paris.html">
+            <img src="./Images/Shimla.jpg" alt="Paris skyline">
+        </a>
+        <p>
+          Shimla, the capital of Himachal Pradesh, is a charming hill station often referred to as the "Queen of Hills." Located at an altitude of 2,276 meters, it is surrounded by lush green forests, snow-capped peaks, and colonial architecture. The Ridge and Mall Road are the heart of Shimla, bustling with shops, cafes, and historic landmarks. Visitors can explore attractions like Christ Church, Jakhoo Temple, and the Viceregal Lodge. Shimla also serves as a starting point for journeys to other destinations in Himachal, including Spiti Valley. Its cool climate, scenic beauty, and serene ambiance make it a favorite among tourists and honeymooners. Rich in history and culture, Shimla provides a perfect blend of natural beauty and urban charm.
+        </p>
+    </div>
+    <div class="content" id="section2">
+      <h3>Chitkul: The Last Village on the Indo-Tibet Border
+      </h3>
+      <a href="paris.html">
+          <img src="./Images/Chitkul.jpg" alt="Paris skyline">
+      </a>
+      <p>
+        Chitkul is a quaint and picturesque village located in the Kinnaur district of Himachal Pradesh, at an altitude of 3,450 meters. Known as the last inhabited village near the Indo-Tibet border, it offers breathtaking views of the snow-clad Himalayas, lush green valleys, and the Baspa River. Chitkul is famous for its serene environment, traditional wooden houses, and friendly locals. The Mata Devi Temple and the ancient Buddhist monastery are popular attractions in the village. Trekking and exploring the surrounding meadows and forests are favorite activities for visitors. During the summer months, the fields bloom with vibrant flowers, adding to the village's charm. Chitkul's pristine beauty and untouched landscapes make it a paradise for nature lovers and photographers.
+      </p>
+  </div>
+  <div class="content" id="section3">
+    <h3>Tabo: The Ajanta of the Himalayas</h3>
+    <a href="paris.html">
+        <img src="./Images/Tabo.jpg" alt="Paris skyline">
+    </a>
+    <p>
+      Tabo is a beautiful place. It is the first major village that you will come across in Spiti valley if you are coming from Shimla.<br>
+
+      Tabo is also known as the “Ajanta of Himalayas” because of the ancient Tabo Monastery and the age-old murals that it houses. Tabo Monastery was built sometime in 996 CE. The monastery is located within the village and not on a hilltop. This was a distinguishing feature of the early period monasteries built before 1300 AD. Similar examples can be seen in Alchi Monastery and Mangyu Temple Complex in Ladakh.<br>
+
+      Once you enter the Tabo Monastery Complex, you will be transported to a different era. And once you look at the ancient murals, you will understand why Tabo is known as the Ajanta of Himalaya. They are simply grand and magnificent.<br>
+      
+      Tabo village also has some ancient caves that you can explore.    </p>
+</div>
+<div class="content" id="section4">
+  <h3>Kaza: Heart of Spiti Valley  </h3>
+  <a href="paris.html">
+      <img src="./Images/Kaza Updated.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Kaza is the headquarters of Spiti Valley and is the most important town of the region. The small town has most of the hotels and all the HRTC buses arrive at and leave from Kaza. While Kaza itself is a small town and hardly has much to offer in terms of attractions, it can serve as your base to explore the region. There are numerous hotels, guest houses and homestays available in Kaza. There are a couple of backpackers hostels as well. It is perhaps the only place in Spiti Valley where you will get good wifi in some of the hotels.<br>
+
+    So you can stay at Kaza, get fuel for your car from the world’s highest fuel station and explore the rest of Spiti Valley.  </p>
+</div>
+<div class="content" id="section5">
+  <h3>Key Monastery: A Spiritual Marvel of Spiti  </h3>
+  <a href="paris.html">
+      <img src="./Images/Key Monestry.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Key village is located about 15 km from Kaza and the most famous attraction of the place is the Key Monastery, whose picture has become eponymous with Spiti Valley itself. The Gompa is grand and beautiful and houses several important artifacts, idols and murals. It is one of the largest and most important monasteries in the region. The Key Gompa has temples, prayer halls, meditation rooms, schools, monk’s quarters, and hostels for young monks inside the complex.  </p>
+</div>
+<div class="content" id="section6">
+  <h3>Hikkim: World's Highest Post Office </h3>
+  <a href="paris.html">
+      <img src="./Images/Hikkim.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Hikkim is quite famous because it has World’s highest post office in the village. Quite naturally, the place is quite a tourist attraction is Spiti Valley. The village itself is small and the few houses that are there are spread out.<br>
+
+    You can visit the Hikkim post office, talk to the postmaster, buy several postcards and send them over to any address you like.  </p>
+</div>
+<div class="content" id="section7">
+  <h3>Gue Village: The Land of the Mummy  </h3>
+  <a href="paris.html">
+      <img src="./Images/Gue Villege.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Yes, there is a mummy in Spiti valley. Gue Mummy Stupa is a latest addition to the attractions in Spiti Valley. Gue village is located about 38 km from Nako. Just after crossing Sumdo, there is a diversion from the main road towards Gue village. The village is about 12 km from the main road and Tabo is another 26 km from the point.<br>
+
+    Gue has a monastery, but its main attraction is the Mummy, believed to be almost 530 years old. The mummy you see here is that of the Buddhist monk Sangha Tenzing. It is believed that the monk had undergone the process of self-mummification to attain this state.<br>
+    
+    As of today, there are only 24 such mummies of monks who had undergone self-mummification. If you look carefully, you can see his teeth, small patches of hair on the head and nails on the body. And all these are not preserved in the way done in Egypt! This process is different.  </p>
+</div>
+<div class="content"id="section8">
+  <h3>Chicham Bridge: Asia's Highest Suspension Bridge  </h3>
+  <a href="paris.html">
+      <img src="./Images/Chicham Bridge.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Chicham Bridge is the latest addition in the attractions of Spiti Valley. Located at an altitude of 13596 feet, this bridge is said to be the highest motorable bridge in Asia connecting 2 villages – Chicham and Kibber. It took almost 15 years to build this bridge. You can cross Chicham Bridge and take the road forward towards Manali.  </p>
+</div>
+<div class="content"id="section9">
+  <h3>ChandraTal Lake: The Moon Lake of Himachal Pradesh
+  </h3>
+  <a href="paris.html">
+      <img src="./Images/Chandratal.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Chandra Tal, meaning "Lake of the Moon," is a stunning high-altitude lake in the Spiti region, located at an elevation of 4,300 meters. Surrounded by the majestic Himalayas, the lake is famous for its crescent shape, crystal-clear blue waters, and tranquil ambiance. It is a popular spot for trekkers and adventure enthusiasts, offering breathtaking views of the surrounding peaks. The lake holds significant spiritual and mythological importance, believed to be a resting place of celestial chariots in ancient times. During summer, the meadows around Chandra Tal bloom with vibrant wildflowers, making it a picturesque camping destination. Accessible via a challenging trek or motorable roads, the lake is a hidden gem for those seeking peace and natural beauty.
+  </p>
+</div>
+
+<div class="container">
+    <div class="image">
+      <img src="./Images/Route MAp.jpg" alt="Sample Image">
+    </div>
+    <div class="info">
+        <div class="content" id="infoSec">
+            <h3>Spiti Valley Itinerary</h3>
+            <a href="paris.html">
+                
+            </a>
+            <p>Spiti Valley Itinerary
+              Here is a glimpse of a most-common itinerary for Spiti assuming you start at Shimla and end in Manali.<br>
+              </p>
+              
+                  <p style="text-align:justify;"> 
+                      Day 1 | : Shimla – Sarahan<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 2 | : Sarahan – Kalpa<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 3 | : Kalpa – Nako – Gue – Tabo<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 4 | : Tabo – Dhankar – Pin valley (Mud Village)<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 5 | : Mud village – Kaza – Key – Kibber – Kaza<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 6 | : Kaza – Hikkim – Komic – Langza – Kaza<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 7 | : Kaza – Kunzum Pass – Chandratal Lake<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 8 | : Chandratal Lake – Manali <br>
+                                                                                                                           <br>
+                  </p>
+              
+             
+          
+          
+          </div>
+    </div>
+  </div>
+  <div class="container1">
+    <div class="info1">
+        <div class="content" id="infoSec">
+            <h3>Best time to visit Spiti Valley</h3>
+            <a href="paris.html">
+               
+            </a>
+            <p>
+              The best time to visit Spiti Valley is between May to September. This is the most popular and peak season for the tourists. However, you can visit Spiti at other times of the year as well. Here is a detailed breakdown of the seasons in Spiti Valley. <br>
+              <b>April & May</b><br>
+          April and May is typically a shoulder season. If you want to visit Spiti valley during April, we recommend the second half of the month.<br>
+          <b>June to September (Peak Season)</b><br>
+          As mentioned before, this is the best time to visit Spiti Valley in terms of weather and facilities and is also the peak season for tourists. It does not rain much in Spiti Valley and there is no distinct monsoon. It is like the summer season seamlessly merging into the early autumn – something that you will encounter in Ladakh as well.<br>
+          <b>November to March (Winter Spiti)</b><br>
+          Spiti is a winter wonderland covered in a blanket of white snow. This has made Spiti Valley a coveted destination in the winters and winter Spiti trips are quite common these days. Apart from the snow covered landscape, winter is also the time to spot snow leopards in the region.<br>
+          </p>
+          </div>
+          
+    </div>
+    <div class="image1">
+      <img src="./Images/Best time to visit.jpg" alt="Sample Image">
+    </div>
+  </div>
+  <div class="container">
+    <div class="image">
+      <img src="./Images/Homestays.jpg" alt="Sample Image">
+    </div>
+    <div class="info">
+        <div class="content" id="infoSec">
+            <h3>Homestays at Spiti Valley</h3>
+            <a href="paris.html">
+                
+            </a>
+            <p>Gone are the days when finding an accommodation in Spiti was tough. Now, there are many options of stay in Spiti Valley and around. Most of the expensive hotels and resorts can be found in Kaza, the headquarters of Spiti. Tabo also has a few hotels and guest houses.<br>
+              </p>
+              
+                  <p style="text-align:justify;"> 
+                    However, if you want to experience village life at Spiti, then stay at a homestay. There are many homestays in the region and you can find them in the villages. You might not have to book ahead for a stay at a homestay in Spiti Valley. In these homestays, you stay with the locals, eat local food and understand their way of life and get an insight into the culture. The costs are generally low and depend on the village and season.
+
+                    We had stayed at homestays in Dhankar, Mud, Langza and Key village during our Spiti Valley road trip.<br>
+                    Experience the warmth and comfort of a home with our curated selection of homestays. Whether you’re seeking a cozy mountain retreat, a serene village escape, or a culturally immersive stay, our homestays offer a personalized touch that hotels often lack. Enjoy homemade meals, local traditions, and heartfelt hospitality from hosts who treat you like family. Perfect for solo travelers, couples, and families, these stays provide a unique way to explore destinations while feeling at home. Discover hidden gems, connect with locals, and create unforgettable memories in authentic and welcoming settings.<br>
+                                                                                                                           <br>
+                  </p>
+              
+             
+          
+          
+          </div>
+    </div>
+  </div>
+
+  <div class="container1">
+    <div class="info1">
+        <div class="content" id="infoSec">
+            <h3>Food at Spiti Valley</h3>
+            <a href="paris.html">
+               
+            </a>
+            <p>
+              Food in Spiti valley is a mix of Tibetan, Nepalese and Himachali cuisine. You will find thukpas, momos, thentuk, mokthuk, chowmein in most of the restaurants and eateries. At the homestays, you might get some authentic Tibetan food.<br>
+
+We found good rajma Chawal at Nako and Tabo. At Dhankar, we ate Tibetan bread and thentuk at our homestay. Kaza had several restaurants serving Tibetan food. There was also a North Indian restaurant at Kaza market that served North Indian thali, samosa and chaats with very good milk tea.<br>
+Welcome to the Food section of my blog, where flavors and aromas come alive! This space is dedicated to celebrating the joy of food, from traditional recipes to modern culinary adventures. Whether you're a passionate foodie or just someone looking for a quick bite of inspiration, you'll find something here to savor. Explore regional delicacies, global cuisines, and tips for making everyday meals extraordinary. From street food treasures to healthy eating ideas, each post is crafted to delight your taste buds and inspire your kitchen experiments. Let's embark on a flavorful journey together!<br>
+
+</p>
+          </div>
+          
+    </div>
+    <div class="image1">
+      <img src="./Images/food1.jpg" alt="Sample Image">
+    </div>
+  </div>
+  
+  <div class="photogallery">
+    <h3>Photo Gallery</h3>
+    <div class="photo-text-container">
+        <div class="photo-text-item">
+            <a href="#section1">
+                <img src="./Photo Gallery/WhatsApp Image 2025-01-19 at 09.01.40_aafc76e1.jpg" alt="Mud">
+            </a>
+            
+        </div>
+        <div class="photo-text-item">
+          <a href="#section2">
+              <img src="./Photo Gallery/IMG-20250119-WA0005.jpg" alt="Mud">
+          </a>
+          
+      </div>
+      <div class="photo-text-item">
+        <a href="#section3">
+            <img src="./Photo Gallery/IMG-20250119-WA0006.jpg" alt="Mud">
+        </a>
+        
+    </div>
+    <div class="photo-text-item">
+      <a href="#section4">
+          <img src="./Photo Gallery/IMG-20250119-WA0007.jpg" alt="Mud">
+      </a>
+      
+  </div>
+  <div class="photo-text-item">
+    <a href="#section5">
+        <img src="./Photo Gallery/IMG-20250119-WA0008.jpg" alt="Mud">
+    </a>
+    
+</div>
+<div class="photo-text-item">
+  <a href="#section6">
+      <img src="./Photo Gallery/IMG-20250119-WA0009.jpg" alt="Mud">
+  </a>
+  
+</div>
+<div class="photo-text-item">
+<a href="#section1">
+    <img src="./Photo Gallery/IMG-20250119-WA0010.jpg" alt="Mud">
+</a>
+
+</div>
+        <div class="photo-text-item">
+            <a href="mahabalipuram.jpg">
+                <img src="./Photo Gallery/IMG-20250119-WA0011.jpg" alt="Cityscape">
+            </a>
+            
+        </div>
+        <div class="photo-text-item">
+            <a href="mountains.html">
+                <img src="./Photo Gallery/WhatsApp Image 2025-01-19 at 08.52.04_43355dc5.jpg" alt="Mountain view">
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+
+    <!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Logo and Social Links -->
+      <div class="footer-logo" >
+        <h2>The Wander Compass</h2>
+        
+        <div class="social-links">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/watch?v=ak-Ei831dtk" class="fa fa-youtube"></a>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#"></a>Best Time To Visit</li>
+          <li><a href="https://www.google.com/travel/search?q=homestays%20in%20spiti%20valley&g2lb=4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499705%2C72560029%2C72573224%2C72614662%2C72616120%2C72619927%2C72628719%2C72647020%2C72648289%2C72686036%2C72760082%2C72803964%2C72808078%2C72832973%2C72852859&hl=en-IN&gl=in&ssta=1&ts=CAISCAoCCAMKAggDGh4SHBIUCgcI6Q8QBBgDEgcI6Q8QBBgFGAIyAhAAOAEqBwoFOgNJTlI&qs=CAEyKENob1E0X3pVdTVmWXktbW9BUm9OTDJjdk1URjBlSEZ1TXpkbmJCQUM4CkIJEX8rl9er1DgzQgkRKZK65_5OOnZCCRFjPnV3wS7TqA&ap=aAF6KENob1E0X3pVdTVmWXktbW9BUm9OTDJjdk1URjBlSEZ1TXpkbmJCQUO6AQhvdmVydmlldw&ictx=111&ved=0CAAQ5JsGahcKEwiIoeqUlYGLAxUAAAAAHQAAAAAQCA">Homestays</a></li>
+          <li><a href="https://www.masalabox.co.in/food-spiti-valley-eat-spiti/">Food</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Spiti">Wikipedia</a></li>
+
+
+          <li><a href="https://www.youtube.com/results?search_query=spiti+valley+road+trip">Youtube Link</a></li>
+          <li><a href="#">Homestays</a></li>
+        </ul>
+      </div>
+
+      
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p >
+        Copyright © 2025 <strong>The Wander Compass</strong> – Made with 
+        <span class="heart">❤️</span> by us | <strong>All Rights Reserved</strong>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    
+</body>
+</html>
