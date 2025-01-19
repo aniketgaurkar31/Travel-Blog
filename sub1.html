@@ -187,7 +187,6 @@
             font-weight: 400;
             margin: 20px auto;
             max-width: 700px;
-            padding-bottom: 20px;
             color: #555;
         }
 
@@ -238,10 +237,8 @@
         }
 
         .photo-text-item img {
-         /*width: 300px;
-          height: 250px;*/
-          height: 80%;
-          max-width: 100%;
+            max-width: 100%;
+            height: auto;
             border-radius: 5px;
             margin-bottom: 10px;
             transition: transform 0.3s ease;
@@ -353,7 +350,34 @@
 }
 
 
-        
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #FFF;
+            border-top: 1px solid #DDD;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .cookie-banner button {
+            background-color: #007BFF;
+            color: #FFF;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .cookie-banner button:hover {
+            background-color: #0056b3;
+        }
 
         #infoSec{
             background-color: #ffffff;
@@ -378,9 +402,7 @@
             <img src="./Images/pondicherry.jpg" alt="Paris skyline">
         </a>
         <p>
-          Pondicherry, also known as Puducherry, is a charming coastal town in southern India. It is renowned for its French colonial heritage, vibrant architecture, and serene beaches. The town’s iconic French Quarter features colorful buildings with arched windows, wooden doors, and bougainvillea-draped facades, as seen in the image. Pondicherry is a melting pot of cultures, blending French and Tamil influences in its cuisine, language, and lifestyle. Visitors often explore its quaint cafes, cobblestone streets, and spiritual hubs like the Aurobindo Ashram. The peaceful ambiance and picturesque views make it a popular destination for relaxation and cultural exploration. 
-
-        </p>
+          Pondicherry, also known as Puducherry, is a charming coastal town in southern India. It is renowned for its French colonial heritage, vibrant architecture, and serene beaches. The town’s iconic French Quarter features colorful buildings with arched windows, wooden doors, and bougainvillea-draped facades, as seen in the image. Pondicherry is a melting pot of cultures, blending French and Tamil influences in its cuisine, language, and lifestyle. Visitors often explore its quaint cafes, cobblestone streets, and spiritual hubs like the Aurobindo Ashram. The peaceful ambiance and picturesque views make it a popular destination for relaxation and cultural exploration.  </p>
     </div>
 
     <div class="additional-content">
@@ -420,11 +442,14 @@
       <a href="#section6">
           <img src="./Images/chunnambhar-boathouse-.jpeg" alt="Mud">
       </a>
-      <p>Chunnambhar Boathouse</p>
+      <p>Chunnambar Boathouse</p>
   </div>
   
+            
+        </div>
+    </div>
     <div class="content" id="section1">
-        <h3>Rock Beach</h3>
+        <h3>Rock Beach: Serene shoreline of Pondicherry </h3>
         <a href="paris.html">
             <img src="./Images/rock-beach.jpg" alt="Paris skyline">
         </a>
@@ -439,7 +464,7 @@
         </p>
     </div>
     <div class="content" id="section2">
-      <h3>Serenity Beach
+      <h3>Serenity Beach: Tranquil escape in Pondicherry
       </h3>
       <a href="paris.html">
           <img src="./Images/Serenity Beach.jpg" alt="Paris skyline">
@@ -459,18 +484,18 @@
       </p>
   </div>
   <div class="content" id="section3">
-    <h3>Auroville</h3>
+    <h3>Auroville: Global township of harmony</h3>
     <a href="paris.html">
         <img src="./Images/auroville.jpg" alt="Paris skyline">
     </a>
     <p>
       Located about 15 kilometers from Puducherry, Auroville is an experimental township envisioned by Mirra Alfassa, known as "The Mother," and inspired by the teachings of Sri Aurobindo. Founded in 1968, Auroville is dedicated to the idea of human unity and sustainability. The centerpiece of Auroville is the Matrimandir, a golden spherical meditation center surrounded by lush gardens, symbolizing peace and spiritual progress. The community is home to residents from over 50 countries, who work together to create a self-sustaining and inclusive society. Visitors can explore its organic farms, eco-friendly architecture, and artisan workshops, or simply experience its tranquil atmosphere.
 
-      Puducherry and Auroville together offer a unique blend of culture, spirituality, and natural beauty, making them a must-visit destination for those seeking inspiration and peace.
-    </p>
+      Puducherry and Auroville together offer a unique blend of culture, spirituality, and natural beauty, making them a must-visit destination for those seeking inspiration and peace.   </p>
 </div>
 <div class="content" id="section4">
-  <h3>French Colony  </h3>
+  <h3>
+    French Colony: Timeless charm of Pondicherry  </h3>
   <a href="paris.html">
       <img src="./Images/french.jpeg" alt="Paris skyline">
   </a>
@@ -482,9 +507,7 @@
     <b>Sacred Sites:</b> Visit the Sacred Heart Basilica, a stunning Gothic-style church, and the Notre Dame des Anges Church, famous for its Greco-Roman architecture and a serene beachfront location.</br>
     <b>Spiritual Retreats:</b> The Aurobindo Ashram, located in the heart of the French Quarter, offers a peaceful space for meditation and reflection.</br>
     <b>Promenade Beach:</b> Enjoy a leisurely walk along the Promenade Beach, soaking in views of the Bay of Bengal and iconic landmarks like the Gandhi Statue and the old Lighthouse.
-    A Culinary Journey</br>
-   
-  </p>
+    A Culinary Journey</br>  </p>
 </div>
 <div class="content" id="section5">
   <h3>Puducherry Museum: A Peek Into History  </h3>
@@ -496,52 +519,54 @@
 
     From ancient bronze sculptures from the Chola dynasty to relics from the Roman Empire, the exhibits span centuries of history. A standout feature is the <b>Arikamedu archaeological collection</b>, displaying remnants of the Indo-Roman trade that flourished here. The museum also houses rare coins, terracotta figurines, French furniture, and intricate carvings that offer insights into Puducherry's diverse cultural influences.
     
-    The <b>transport gallery</b>, with its vintage palanquins and carts, and the impressive fossil collection make it a delightful stop for history enthusiasts and curious travelers alike. With its serene ambiance and fascinating displays, the Puducherry Museum is a must-visit for anyone exploring this charming coastal town.
-  </p>
+    The <b>transport gallery</b>, with its vintage palanquins and carts, and the impressive fossil collection make it a delightful stop for history enthusiasts and curious travelers alike. With its serene ambiance and fascinating displays, the Puducherry Museum is a must-visit for anyone exploring this charming coastal town.</p>
 </div>
 <div class="content" id="section6">
-  <h3>Chunnambar Boathouse </h3>
+  <h3>
+    Chunnambar Boathouse: Gateway to backwater bliss </h3>
   <a href="paris.html">
       <img src="./Images/chunnambhar-boathouse-.jpeg" alt="Paris skyline">
   </a>
   <p>
-    Located just 8 km from the heart of Puducherry, the Chunnambar Boathouse is a serene escape for nature and adventure enthusiasts. Nestled along the banks of the Chunnambar River, this picturesque spot offers boating, kayaking, and thrilling water sports. The highlight is a ferry ride to Paradise Beach, a pristine, golden-sand beach surrounded by lush greenery. Visitors can enjoy houseboat stays, picnic spots, and panoramic views of the tranquil backwaters. Ideal for a day trip, Chunnambar Boathouse combines relaxation and adventure, making it a must-visit destination in Puducherry.
-  </p>
+    Located just 8 km from the heart of Puducherry, the Chunnambar Boathouse is a serene escape for nature and adventure enthusiasts. Nestled along the banks of the Chunnambar River, this picturesque spot offers boating, kayaking, and thrilling water sports. The highlight is a ferry ride to Paradise Beach, a pristine, golden-sand beach surrounded by lush greenery. Visitors can enjoy houseboat stays, picnic spots, and panoramic views of the tranquil backwaters. Ideal for a day trip, Chunnambar Boathouse combines relaxation and adventure, making it a must-visit destination in Puducherry.  </p>
 </div>
+
+
 
 
 <div class="container">
     <div class="image">
-      <img src="./Images/iter.png"  alt="Sample Image">
+      <img src="./Images/iter.png" alt="Sample Image">
     </div>
     <div class="info">
         <div class="content" id="infoSec">
-            <h3>Spiti Valley Itinerary</h3>
+            <h3>
+              Pondicherry Itinerary
+              </h3>
             <a href="paris.html">
                 
             </a>
-            <p>Spiti Valley Itinerary
-              Here is a glimpse of a most-common itinerary for Spiti assuming you start at Shimla and end in Manali.<br>
+            <p>
+              Here’s a glimpse of a most-common itinerary for Pondicherry, assuming you start in Chennai and explore the highlights of this coastal town<br>
               </p>
               
-                  <p style="text-align:justify;"> 
-                      Day 1 | : Pudducherry <br>
-                      ---------|---------------------------------------------------------------------------------------<br>
-                      Day 2 | : Rock Beach<br>
-                      ---------|---------------------------------------------------------------------------------------<br>
-                      Day 3 | : Serenity Beach<br>
-                      ---------|---------------------------------------------------------------------------------------<br>
-                      Day 4 | : Auroville<br>
-                      ---------|---------------------------------------------------------------------------------------<br>
-                      Day 5 | : French Colony<br>
-                      ---------|---------------------------------------------------------------------------------------<br>
-                      Day 6 | : Puducherry Museum<br>
-                      ---------|---------------------------------------------------------------------------------------<br>
-                      Day 7 | : Chunnambhar Boathouse<br>
-                     
-                                                                                                                           <br>
-                  </p>
-              
+              <p style="text-align:justify;"> 
+                Day 1 | : Pudducherry <br>
+                ---------|---------------------------------------------------------------------------------------<br>
+                Day 2 | : Rock Beach<br>
+                ---------|---------------------------------------------------------------------------------------<br>
+                Day 3 | : Serenity Beach<br>
+                ---------|---------------------------------------------------------------------------------------<br>
+                Day 4 | : Auroville<br>
+                ---------|---------------------------------------------------------------------------------------<br>
+                Day 5 | : French Colony<br>
+                ---------|---------------------------------------------------------------------------------------<br>
+                Day 6 | : Puducherry Museum<br>
+                ---------|---------------------------------------------------------------------------------------<br>
+                Day 7 | : Chunnambhar Boathouse<br>
+               
+                                                                                                                     <br>
+            </p>
              
           
           
@@ -551,11 +576,11 @@
   <div class="container1">
     <div class="info1">
         <div class="content" id="infoSec">
-            <h3>Best time to visit Spiti Valley</h3>
+            <h3>Best time to visit Pondicherry</h3>
             <a href="paris.html">
                
             </a>
-            <p>
+            <p style="text-align:justify;">
               The best time to visit Puducherry is from <b>November to February</b>. During these months, the weather is cool and pleasant, with temperatures ranging from 15°C to 30°C, making it ideal for sightseeing, relaxing on the beaches, and exploring the city.</br> The sea breeze adds to the charm, and it's the peak tourist season, so you'll have plenty of activities to enjoy.
 
 <b>March to June</b> is the summer season, with high temperatures reaching around 40°C and high humidity, which can make outdoor activities uncomfortable. This is not the best time to visit unless you prefer fewer crowds and don’t mind the heat.</br>
@@ -570,6 +595,75 @@
       <img src="./Images/DALL·E 2025-01-19 11.01.37 - A beautiful scenic view of Puducherry during the ideal travel season (October to March), showcasing clear skies, the serene beaches with gentle waves,.webp" alt="Sample Image">
     </div>
   </div>
+  <div class="container">
+    <div class="image">
+      <img src="./Images/homestays.webp" alt="Sample Image">
+    </div>
+    <div class="info">
+        <div class="content" id="infoSec">
+            <h3>Homestays at Spiti Valley</h3>
+            <a href="paris.html">
+                
+            </a>
+            <p>Homestays in Pondicherry offer a unique blend of comfort, local culture, and personalized hospitality, making them an ideal choice for travelers seeking a cozy and immersive experience.<br>
+              </p>
+              
+                  <p style="text-align:justify;"> 
+                    <b>Cultural Connection:</b> Many homestays are run by locals who provide insights into the heritage, traditions, and stories of Pondicherry. Some also reflect the city's French and Tamil influences in their architecture and interiors.</br>
+
+<b>Personalized Attention:</b> Unlike larger accommodations, homestays offer a warm, personalized touch, with hosts often assisting guests with itinerary planning, local recommendations, and authentic home-cooked meals.</br>
+
+<b>Unique Locations:</b> Homestays are scattered across the city—from the picturesque French Quarter to quieter areas near Serenity Beach, Auroville, and surrounding villages—offering a variety of options to suit different preferences.</br>
+
+<b>Affordable and Homely:</b> Homestays cater to diverse budgets and provide amenities like free Wi-Fi, air-conditioning, and clean, comfortable rooms, creating a "home-away-from-home" ambiance.</br>
+
+<b>Eco-Friendly and Artistic Options:</b> Some homestays, especially in Auroville or eco-conscious areas, emphasize sustainability, with organic meals, eco-friendly practices, and artistic workshops as part of the experience.</br>
+
+Choosing a homestay in Pondicherry not only enhances your stay with a local touch but also supports community-based tourism, allowing you to explore this charming destination authentically.<br>
+                                                                                                                           <br>
+                  </p>
+              
+             
+          
+          
+          </div>
+    </div>
+  </div>
+
+  <div class="container1">
+    <div class="info1">
+        <div class="content" id="infoSec">
+            <h3>Food in Pondicherry</h3>
+            <a href="paris.html">
+               
+            </a>
+            <p style="text-align:justify;">
+              Pondicherry is a food lover's paradise, offering a unique blend of French, Tamil, and global cuisines that reflect its rich cultural heritage.</br>
+
+              <b>French Delights:</b> Influenced by its colonial past, Pondicherry is renowned for its French-inspired dishes, including flaky croissants, baguettes, ratatouille, and creamy desserts like crème brûlée and profiteroles.</br>
+              
+              <b>Tamil Cuisine:</b> South Indian flavors shine with dosas, idlis, spicy sambars, seafood curries, and coconut-infused dishes. Banana-leaf meals and local Tamil street food are must-tries.</br>
+              
+              <b>Seafood Paradise:</b> With its coastal location, Pondicherry serves a variety of fresh seafood dishes, including prawn masala, crab curry, and grilled fish, prepared with aromatic spices.</br>
+              
+              <b>Fusion Food:</b> The city’s cuisine creatively combines French and Indian flavors, offering dishes like curried chicken baguettes, spiced soufflés, and masala quiches.</br>
+              
+              <b>Global Cafes:</b> Pondicherry is dotted with cozy cafes and bistros serving everything from wood-fired pizzas and pasta to vegan and organic fare, often paired with excellent coffee.</br>
+              
+              <b>Desserts and Bakeries:</b> Bakeries in Pondicherry are famous for pastries, macarons, and artisanal chocolates, perfect for indulging your sweet tooth.</br>
+              
+              <b>Local Drinks:</b> Don’t miss out on refreshing coconut water, palm wine, and signature South Indian filter coffee to complement your meals.</br>
+              
+              Whether you’re dining at a French-style bistro, savoring Tamil street food, or enjoying seafood by the beach, Pondicherry’s diverse culinary scene promises a feast for every palate.</br>
+
+</p>
+          </div>
+          
+    </div>
+    <div class="image1">
+      <img src="./Images/food.jpg" alt="Sample Image">
+    </div>
+  </div>
   
   <div class="photogallery">
     <h3>Photo Gallery</h3>
@@ -582,49 +676,49 @@
         </div>
         <div class="photo-text-item">
           <a href="#section2">
-              <img src="./Images/personal2.jpg" alt="Mud">
+              <img src="./Images/photo1.png" alt="Mud">
           </a>
           
       </div>
       <div class="photo-text-item">
         <a href="#section3">
-            <img src="./Photo Gallery/IMG-20250119-WA0006.jpg" alt="Mud">
+            <img src="./Images/photo2.png" alt="Mud">
         </a>
         
     </div>
     <div class="photo-text-item">
       <a href="#section4">
-          <img src="./Photo Gallery/IMG-20250119-WA0007.jpg" alt="Mud">
+          <img src="./Images/photo3.png" alt="Mud">
       </a>
       
   </div>
   <div class="photo-text-item">
     <a href="#section5">
-        <img src="./Photo Gallery/IMG-20250119-WA0008.jpg" alt="Mud">
+        <img src="./Images/personal2.jpg" alt="Mud">
     </a>
     
 </div>
 <div class="photo-text-item">
   <a href="#section6">
-      <img src="./Photo Gallery/IMG-20250119-WA0009.jpg" alt="Mud">
+      <img src="./Images/photo4.png" alt="Mud">
   </a>
   
 </div>
 <div class="photo-text-item">
 <a href="#section1">
-    <img src="./Images/" alt="Mud">
+    <img src="./Images/photo5.png" alt="Mud">
 </a>
 
 </div>
         <div class="photo-text-item">
             <a href="mahabalipuram.jpg">
-                <img src="./Photo Gallery/IMG-20250119-WA0011.jpg" alt="Cityscape">
+                <img src="./Images/photo6.jpg" alt="Cityscape">
             </a>
             
         </div>
         <div class="photo-text-item">
             <a href="mountains.html">
-                <img src="./Photo Gallery/WhatsApp Image 2025-01-19 at 08.52.04_43355dc5.jpg" alt="Mountain view">
+                <img src="./Images/personal3.jpg" alt="Mountain view">
             </a>
             
         </div>
@@ -644,7 +738,7 @@
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-youtube"></a>
+            <a href="https://www.youtube.com/watch?v=MPbZ-Sd9_BE&ab_channel=XploreTheEarth" class="fa fa-youtube"></a>
         </div>
       </div>
 
@@ -652,9 +746,9 @@
       <div class="footer-column">
         <h3>Resources</h3>
         <ul>
-          <li><a href="#">How to start a travel blog</a></li>
-          <li><a href="#">Travel blog name ideas</a></li>
-          <li><a href="#">Travel Quotes</a></li>
+          <li><a href="#"></a>Best Time To Visit</li>
+          <li><a href="https://www.google.com/travel/search?q=homestays%20in%20spiti%20valley&g2lb=4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499705%2C72560029%2C72573224%2C72614662%2C72616120%2C72619927%2C72628719%2C72647020%2C72648289%2C72686036%2C72760082%2C72803964%2C72808078%2C72832973%2C72852859&hl=en-IN&gl=in&ssta=1&ts=CAISCAoCCAMKAggDGh4SHBIUCgcI6Q8QBBgDEgcI6Q8QBBgFGAIyAhAAOAEqBwoFOgNJTlI&qs=CAEyKENob1E0X3pVdTVmWXktbW9BUm9OTDJjdk1URjBlSEZ1TXpkbmJCQUM4CkIJEX8rl9er1DgzQgkRKZK65_5OOnZCCRFjPnV3wS7TqA&ap=aAF6KENob1E0X3pVdTVmWXktbW9BUm9OTDJjdk1URjBlSEZ1TXpkbmJCQUO6AQhvdmVydmlldw&ictx=111&ved=0CAAQ5JsGahcKEwiIoeqUlYGLAxUAAAAAHQAAAAAQCA">Homestays</a></li>
+          <li><a href="https://www.masalabox.co.in/food-spiti-valley-eat-spiti/">Food</a></li>
         </ul>
       </div>
 
@@ -662,11 +756,11 @@
       <div class="footer-column">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#">Plan your trip</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Spiti">Wikipedia</a></li>
 
 
-          <li><a href="#">Work with us</a></li>
-          <li><a href="#">Write for us</a></li>
+          <li><a href="https://www.youtube.com/results?search_query=spiti+valley+road+trip">Youtube Link</a></li>
+          <li><a href="#">Homestays</a></li>
         </ul>
       </div>
 
@@ -675,7 +769,7 @@
     <!-- Copyright -->
     <div class="footer-bottom">
       <p >
-        Copyright © 2024 <strong>Tale of 2 Backpackers</strong> – Made with 
+        Copyright © 2025 <strong>The Wander Compass</strong> – Made with 
         <span class="heart">❤️</span> by us | <strong>All Rights Reserved</strong>
       </p>
     </div>
