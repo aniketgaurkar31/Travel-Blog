@@ -10,7 +10,7 @@
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ffffff;
             color: #444;
         }
 
@@ -48,23 +48,31 @@
             font-weight: bold;
         }
 
-        header nav a:hover {
+        header nav a:hover { 
             color: #3498db;
         }
 
         .hero {
             
-            
+            background-image: url("./back.png");
+        
             background-size: cover;
             background-position: center;
             height: 400px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            color: #141313;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            align-items:start;
+            color: #2C3E50;
+            text-shadow: 0 2px 5px rgb(255, 254, 254);
             font-size: 36px;
             font-weight: bold;
+        }
+        
+        .hero p{
+            
+            line-height: 1.5;
+            margin-top: 100px;
+            
         }
 
         .intro {
@@ -72,7 +80,7 @@
             margin: 40px auto;
             text-align: center;
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -100,7 +108,7 @@
 
         .gallery img {
             width: 100%;
-            height: auto;
+            height: 100%;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -154,7 +162,7 @@
     </header>
 
     <section class="hero">
-        Explore the world, one direction at a time with The Wander Compass.
+       <p> Explore the world, one direction at a time with The Wander Compass.</p>
     </section>
 
     <section class="intro">
@@ -164,9 +172,9 @@
     
 
     <section class="gallery">
-        <a href="http://127.0.0.1:5500/GroupProject/subpage.html"><img src="beach.jpg" alt="Mountain Hike"></a>
-        <img src="beach2.jpg" alt="Beach Paradise">
-        <img src="pondi.jpg" alt="City Lights">
+        <a href="http://127.0.0.1:5500/GroupProject/subpage.html"><img src="./goa.jpg" alt="Goa">Goa</a>
+        <img src="./kokan.jpg" alt="Kokan">
+        <img src="./spiti.jpg" alt="Spiti">
         <img src="mahabalipuram.jpg" alt="Cultural Escape">
         <img src="beach.jpg" alt="Wildlife Adventure">
         <img src="beach2.jpg" alt="Desert Dunes">
