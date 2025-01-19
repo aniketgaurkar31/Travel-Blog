@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Alpine Creative</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap; /* Makes it responsive */
+          }
+      
+          .image {
+            flex: 1;
+           
+          }
+      
+          .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+      
+          .info {
+            flex: 2;
+            max-width: 600px;
+          }
+      
+          .info h1 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: #333;
+          }
+      
+          .info p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+          }
+      
+          @media (max-width: 768px) {
+            .container {
+              flex-direction: column; /* Stacks content on smaller screens */
+              text-align: center;
+            }
+      
+            .image, .info {
+              max-width: 100%;
+            }
+          }
+      
+          .container1 {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px;
+              gap: 10px;
+              max-width: 1200px;
+              margin: auto;
+              flex-wrap: wrap; /* Makes it responsive */
+            }
+        
+            .info1 {
+              flex: 2;
+              max-width: 600px;
+            }
+        
+            .info1 h1 {
+              margin-top: 0;
+              font-size: 2rem;
+              color: #333;
+            }
+        
+            .info1 p {
+              font-size: 1rem;
+              line-height: 1.6;
+              color: #555;
+            }
+        
+            .image1 {
+              flex: 1;
+              
+            }
+        
+            .image1 img {
+              width: 100%;
+              height: auto;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            @media (max-width: 768px) {
+              .container1 {
+                flex-direction: column-reverse; /* Stacks image below text on smaller screens */
+                text-align: center;
+              }
+        
+              .info1, .image1 {
+                max-width: 100%;
+              }
+            }
+
+        .header {
+            text-align: center;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #333;
+            margin: 40px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #DDD;
+            border-bottom: 1px solid #DDD;
+            padding: 15px 0;
+            background-color: #FAF9F5;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            margin: 0 20px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 0 20px;
+            background-color: #e8ece6;
+        }
+
+        .content h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .content h3 {
+          font-family: 'Libre Baskerville', serif;
+          font-size: 1.9rem;
+          font-weight: 400;
+          color: #333;
+          margin-bottom: 30px;
+      }
+
+        .content img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .content p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin: 20px auto;
+            max-width: 700px;
+            color: #555;
+        }
+
+        .additional-content {
+            margin: 40px auto;
+            max-width: 950px;
+            padding: 0 20px;
+        }
+
+        .photogallery{
+            margin: 40px auto;
+            
+            padding: 0 20px;
+        }
+        
+        .photogallery h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+
+        .additional-content h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .photo-text-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        .photo-text-item {
+            width: calc(33% - 20px);
+            text-align: center;
+        }
+
+        .photo-text-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .photo-text-item img {
+            width: 100%;
+            height: 80%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-text-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-text-item p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Footer Styles */
+.footer {
+  background-color: #072540;
+  color: #fff;
+  padding-top: -20rem;
+ 
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-logo h2 {
+    padding-bottom: 0.5rem;
+  color: #FFC72C;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.social-links a {
+  margin-right: 10px;
+  padding: 0.7rem;
+  color: #fff;
+  font-size: 3rem;
+  justify-content: space-evenly;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #FFC72C;
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  color: #FF6F61;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #FFC72C;
+}
+
+.footer-bottom {
+    align-items: center;
+  text-align: center;
+  
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-bottom .heart {
+  color: #FF6F61;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+}
+
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #FFF;
+            border-top: 1px solid #DDD;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .cookie-banner button {
+            background-color: #007BFF;
+            color: #FFF;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .cookie-banner button:hover {
+            background-color: #0056b3;
+        }
+
+        #infoSec{
+            background-color: #ffffff;
+            text-align: center;
+            font-size: 10rem;
+            border-radius: 5rem;
+        }
+
+        
+       
+    </style>
+</head>
+<br>
+
+    <div class="header">Goa Diaries: Adventures, Serenity, and Culinary Delights</div>
+
+    
+
+    <div class="content">
+        <h2>Goa</h2>
+        <a href="paris.html">
+            <img src="./5_6249130287003862382.jpg" alt="Paris skyline">
+        </a>
+        <p>
+          Goa is a state on the southwestern coast of India within the Konkan region, geographically separated from the Deccan highlands by the Western Ghats. It is bound by the Indian states of Maharashtra to the north, and Karnataka to the east and south, with the Arabian Sea in the west. It is India's smallest state by area and fourth-smallest by population. Goa has the highest GDP per capita among all Indian states, two and a half times as high as the GDP per capita of the country as a whole. The Eleventh Finance Commission of India named Goa the best-placed state because of its infrastructure, and India's National Commission on Population rated it as having the best quality of life in India. It is the second-highest ranking among Indian states in the human development index.
+        </p>
+          <P>Panaji is the state's capital, while Vasco da Gama is its largest city. The historic city of Margao or "Madgaon" in Goa still exhibits the cultural influence of the Portuguese, who first voyaged to the subcontinent in the early 16th century as merchants, and conquered it soon thereafter, whereupon Goa became an overseas territory of the Portuguese Empire, part of what was then known as Portuguese India, and remained as such for about 456 years until it was annexed by India in 1961. Goa's official language, which is spoken by a majority of its inhabitants, is Konkani.
+  
+    </div>
+
+    <div class="additional-content">
+        <h3>Destinations To Explore</h3>
+        <div class="photo-text-container">
+            <div class="photo-text-item">
+                <a href="#section1">
+                    <img src="1cropped-Baga Beach.jpg" alt="Mud">
+                </a>
+                <p>Baga Beach</p>
+            </div>
+            <div class="photo-text-item">
+              <a href="#section2">
+                  <img src="2cropped-Basilica.jpg" alt="Mud">
+              </a>
+              <p>Basilica of Bom Jesus</p>
+          </div>
+          <div class="photo-text-item">
+            <a href="#section3">
+                <img src="3cropped-Arambol.jpg" alt="Mud">
+            </a>
+            <p>Arambol Beach</p>
+        </div>
+        <div class="photo-text-item">
+          <a href="#section4">
+              <img src="4cropped-Calangute.jpg" alt="Mud">
+          </a>
+          <p>Calangute Beach</p>
+      </div>
+      <div class="photo-text-item">
+        <a href="#section5">
+            <img src="5cropped-Chapora.jpg" alt="Mud">
+        </a>
+        <p>Chapora Fort</p>
+    </div>
+    <div class="photo-text-item">
+      <a href="#section6">
+          <img src="6cropped-butterfly-beach.jpg" alt="Mud">
+      </a>
+      <p>Butterfly Beach</p>
+  </div>
+  <div class="photo-text-item">
+    <a href="#section7">
+        <img src="7cropped-Dudhsagar.jpg" alt="Mud">
+    </a>
+    <p>Dush Sagar Waterfall</p>
+</div>
+            <div class="photo-text-item">
+                <a href="#section8">
+                    <img src="8cropped-Candolim.jpg" alt="Cityscape">
+                </a>
+                <p>Candolim Beach</p>
+            </div>
+            <div class="photo-text-item">
+                <a href="#section9">
+                    <img src="9cropped-Palolem Beach.jpg" alt="Mountain view">
+                </a>
+                <p>Palolem Beach</p>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="section1">
+        <h3>Baga Beach </h3>
+        <a href="Palolem Beach.jpg">
+            <img src="Baga Beach.jpg" alt="Paris skyline">
+        </a>
+        <p>
+           Baga Beach is one of the most vibrant and popular beaches in North Goa. It is renowned for its buzzing atmosphere, exciting nightlife, and thrilling watersports. Located about 16 km from Panjim, Baga is a favorite spot for both Indian and international tourists, offering a mix of adventure, relaxation, and entertainment. Baga Beach is a hub for water activities. Visitors can enjoy parasailing, jet skiing, and banana boat rides, as well as embark on dolphin-watching tours. Adventure enthusiasts can try windsurfing or kiteboarding. By day, the beach bustles with sunbathers, watersport lovers, and families enjoying the lively atmosphere.As the sun sets, Baga transforms into a party destination. The famous Tito’s Lane is home to clubs like Tito’s and Café Mambo, making it a hotspot for nightlife. Beach shacks such as Britto’s and St. Anthony’s offer delicious food, refreshing drinks, and live music, creating the perfect beach vibe.
+        </p>
+    </div>
+    <div class="content" id="section2">
+      <h3> Basilica of Bom Jesus
+      </h3>
+      <a href="paris.html">
+          <img src="Basilica.jpg" alt="Paris skyline">
+      </a>
+      <p>
+        Basilica of Bom Jesus is one of the most significant landmarks in Goa, both in terms of historical importance and religious significance. Located in Old Goa, it is a UNESCO World Heritage Site and stands as a testament to the rich Portuguese colonial heritage of the region.The architecture of the Basilica of Bom Jesus is a blend of Portuguese Baroque and Indian styles. The church is made of laterite stone, which is characteristic of the region, and it is adorned with intricate carvings and gilded decorations. The facade of the basilica is simple yet grand, with a large central door flanked by two towers. Inside, the church is equally stunning, with beautifully painted ceilings and intricate woodwork. The main altar features an ornate design with scenes from the life of Christ.
+      </p>
+  </div>
+  <div class="content" id="section3">
+    <h3>Arambol Beach </h3>
+    <a href="paris.html">
+        <img src="Arambol.jpg" alt="Paris skyline">
+    </a>
+    <p>
+      Arambol Beach is one of the most picturesque and serene beaches in North Goa, offering a perfect escape from the crowded beaches in the area. Known for its laid-back vibe, stunning natural beauty, and welcoming atmosphere, Arambol is ideal for travelers looking for peace, scenic views, and a touch of local culture.The beach lies in the charming village of Arambol, which has retained much of its authentic Goan charm, with vibrant local culture, markets, and traditional houses.Arambol Beach is known for its long, crescent-shaped shoreline lined with palm trees and golden sand. It offers a more relaxed and less commercialized atmosphere compared to some of Goa’s other beaches. The calm waters make it ideal for swimming, and the natural surroundings provide a peaceful environment for relaxation and unwinding.
+    </p>
+</div>
+<div class="content" id="section4">
+  <h3>   Calangute beach </h3>
+  <a href="paris.html">
+      <img src="Calangute.jpg" alt="Paris skyline">
+  </a>
+  <p>
+     Calangute Beach is one of the most iconic and popular beaches in North Goa, often referred to as the "Queen of Beaches." Its wide, golden sandy stretch, lively atmosphere, and abundant amenities make it a favorite destination for both domestic and international travelers.Calangute Beach is known for its long, broad shoreline lined with swaying palm trees. The beach is ideal for a variety of activities, from relaxation to adventure. The gentle waves and soft sand create the perfect setting for sunbathing, swimming, and enjoying the warm tropical climate. The lively atmosphere, with families, solo travelers, and groups of friends, adds to the charm of the place.
+      </p>
+</div>
+<div class="content" id="section5">
+  <h3>Chapora Fort</h3>
+  <a href="paris.html">
+      <img src="Chapora.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Chapora Fort is one of the most famous and well-preserved forts in Goa. Located in North Goa, it stands majestically atop a hill overlooking the Arabian Sea and the Chapora River. This fort, with its historical significance and stunning panoramic views, has become a must-visit destination for history enthusiasts and nature lovers alike.Chapora Fort gained widespread recognition after it featured prominently in the popular Bollywood movie "Dil Chahta Hai" (2001). The scene in which the three friends – Aakash, Sameer, and Siddharth – stand on the fort's ramparts and look at the sea became an iconic moment in Indian cinema. The fort is often referred to as the “Dil Chahta Hai Fort” due to this association, making it a favorite spot for fans of the film.
+  </p>
+</div>
+<div class="content" id="section6">
+  <h3>Butterfly Beach </h3>
+  <a href="paris.html">
+      <img src="butterfly-beach.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Butterfly Beach is a secluded and pristine beach located in South Goa, famous for its crescent shape, golden sand, crystal-clear waters, and stunning surroundings. Tucked away from the usual tourist hustle, this little-known gem offers a tranquil escape for those seeking peace and natural beauty in Goa.Butterfly Beach is known for its striking butterfly-shaped crescent of golden sand. The beach is surrounded by lush green hills and palm trees, making it a picture-perfect destination. The water here is incredibly clear and calm, ideal for swimming and relaxing in the gentle waves.The beach remains untouched and peaceful due to its relative inaccessibility, and it’s perfect for those seeking solitude away from the more commercialized areas of Goa. The calm environment, paired with scenic natural beauty, makes it an ideal spot to unwind, sunbathe, and enjoy nature.
+  </p>
+</div>
+<div class="content" id="section7">
+  <h3>Dudhsagar Waterfall  </h3>
+  <a href="paris.html">
+      <img src="Dudhsagar.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Dudhsagar Waterfall is one of the most famous and breathtaking natural attractions in Goa. Located in the Bhagwan Mahavir Wildlife Sanctuary in the Western Ghats, it is among the tallest waterfalls in India, cascading from a height of 310 meters (1017 feet). The name "Dudhsagar" translates to "sea of milk," describing the white, foamy water as it plunges down the rocks, creating a stunning visual display.Dudhsagar Waterfall is a four-tiered cascade, making it one of the tallest and most impressive waterfalls in India. When the water falls from the cliff, it creates a misty, milky appearance, giving it the illusion of a “sea of milk,” which is where it gets its name. The waterfall is surrounded by lush greenery, making it even more spectacular, especially during the monsoon season when the flow of water is at its peak.
+  </p>
+</div>
+<div class="content" id="section8">
+  <h3> Candolim Beach  </h3>
+  <a href="paris.html">
+      <img src="Candolim.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Candolim Beach located in North Goa, is one of the most popular and vibrant beaches in the region. Known for its calm waters, golden sand, and a more relaxed atmosphere compared to its neighboring beaches, Candolim offers a perfect balance between tranquility and a lively Goan vibe. It is ideal for tourists looking for a beach experience without the overcrowding of more famous spots.Candolim Beach boasts a long stretch of golden sand and is lined with palm trees, giving it a quintessential beach vibe. The waters are generally calm, making it a great spot for swimming, sunbathing, and relaxing by the sea. The beach is quieter than some of the other North Goa beaches, which makes it an attractive destination for visitors looking for a more peaceful and less commercialized environment.The beach is often less crowded during the off-season (April to October), providing a more serene experience. During the tourist season (November to March), the beach has a healthy mix of tourists and locals, offering both peace and a vibrant atmosphere.
+  </p>
+</div>
+<div class="content" id="section9">
+  <h3>Palolem Beach</h3>
+  <a href="paris.html">
+      <img src="Palolem Beach.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Palolem Beach is one of the most beautiful and serene beaches in South Goa. Known for its crescent-shaped coastline, crystal-clear waters, and laid-back atmosphere, Palolem has become a popular destination for travelers seeking tranquility, natural beauty, and a taste of Goa's peaceful side. Whether you're a solo traveler, a couple, or a family, Palolem offers something for everyone, from peaceful beach days to vibrant nightlife.Palolem Beach is a crescent-shaped beach, with soft golden sand and clear turquoise waters. The beach is surrounded by palm trees and hills, offering stunning views from almost every angle. The waters here are relatively calm, making it ideal for swimming, kayaking, and paddleboarding. One of the most beautiful aspects of Palolem is its serene atmosphere, especially in the early mornings when the beach is quiet and uncrowded. The sunset view is equally mesmerizing, as the sun dips below the horizon, casting hues of orange and pink across the sky and reflecting on the water.  </p>
+</div>
+
+<div class="container">
+    <div class="image">
+      <img src="itinerary.webp" alt="Sample Image">
+    </div>
+    <div class="info">
+        <div class="content" id="infoSec">
+            <h3>Goa Itinerary</h3>
+            <a href="paris.html">
+                
+            </a>
+            <p>Goa Itinerary
+              Here is a glimpse of a most-common itinerary for Goa assuming you start from Beaches and end with Beauty.<br>
+              </p>
+              
+                  <p style="text-align:justify;"> 
+                      Day 1 | : Goa – Candolim Beach<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 2 | : North Goa – Baga Beach & Calangute Beach<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 3 | : Dudhsagar Waterfall & Wildlife Sanctuary<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 4 | : Old Goa – Basilica of Bom Jesus & Se Cathedral<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 5 | : South Goa – Palolem Beach<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 6 | : Agonda Beach & Cabo de Rama Fort<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 7 | : Beach – Water Sports and Yoga in Palolem<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 8 | : Explore the Spice Plantations and Departure <br>
+                                                                                                                           <br>
+                  </p>
+ 
+          </div>
+    </div>
+  </div>
+  <div class="container1">
+    <div class="info1">
+        <div class="content" id="infoSec">
+            <h3>Best time to visit Goa</h3>
+            <a href="paris.html">
+               
+            </a>
+            <p>
+              Goa in Winter (November – March)
+              This time of the year is all about lit up and crowded streets, watching fellow tourists or locals whiz by you in scooters and dancing the night away with your loved ones. With Goa usually being a warm place and a victim of the strong sunrays, this time of the year grants some mercy to the land of good times.               <br>
+               Goa in Monsoon (June – August)
+               The rains highlight the beauty of this tropical paradise and reveal all shades of green during this time of the year. This is a good time to witness Goa in all its glory. Since the tourist season is not at its peak, Goa will not be as crowded as it is otherwise.               <br>
+               Goa in Summer (March– May)
+               If you would rather go for the road less traveled by, this is the best time to visit Goa. Goa in the summer season is all about palm trees swaying as the wind touches them, half-empty beaches and quaint cafes.Summer in Goa is all about endless possibilities. This is also the best time for shopping with markets offering you unbelievable prices that you must take advantage of.
+               <br>
+          </p>
+          </div>
+          
+    </div>
+    <div class="image1">
+      <img src="Goa.webp" alt="Sample Image">
+    </div>
+  </div>
+  
+  <div class="photogallery">
+    <h3>Photo Gallery</h3>
+    <div class="photo-text-container">
+        <div class="photo-text-item">
+                <img src="PG1cropped.jpg" alt="Mud">
+        </div>
+        <div class="photo-text-item">
+              <img src="PG2cropped.jpg" alt="Mud">
+          
+      </div>
+      <div class="photo-text-item">
+            <img src="PG3cropped.webp" alt="Mud">
+        
+    </div>
+    <div class="photo-text-item">
+          <img src="PG4cropped.png" alt="Mud">
+      
+  </div>
+  <div class="photo-text-item">
+        <img src="PG5cropped.jpg" alt="Mud">
+    
+</div>
+<div class="photo-text-item">
+      <img src="PG6cropped.jpg" alt="Mud">
+ 
+</div>
+<div class="photo-text-item">
+    <img src="PG7cropped.jpg" alt="Mud">
+
+</div>
+        <div class="photo-text-item">
+                <img src="PG8cropped.jpg" alt="Cityscape">
+       
+        </div>
+        <div class="photo-text-item">
+                <img src="PG9cropped.webp" alt="Mountain view">
+          
+        </div>
+    </div>
+    
+</div>
+
+    <!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Logo and Social Links -->
+      <div class="footer-logo" >
+        <h2>The Wander Compass</h2>
+        
+        <div class="social-links">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#">How to start a travel blog</a></li>
+          <li><a href="#">Travel blog name ideas</a></li>
+          <li><a href="#">Travel Quotes</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Plan your trip</a></li>
+
+
+          <li><a href="#">Work with us</a></li>
+          <li><a href="#">Write for us</a></li>
+        </ul>
+      </div>
+
+      
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p >
+        Copyright © 2025 <strong>The Wander Compass</strong> – Made with 
+        <span class="heart">❤️</span> by us | <strong>All Rights Reserved</strong>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    
+</body>
+</html>

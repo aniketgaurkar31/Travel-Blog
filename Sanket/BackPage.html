@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Alpine Creative</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap; /* Makes it responsive */
+          }
+      
+          .image {
+            flex: 1;
+           
+          }
+      
+          .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+      
+          .info {
+            flex: 2;
+            max-width: 600px;
+          }
+      
+          .info h1 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: #333;
+          }
+      
+          .info p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+          }
+      
+          @media (max-width: 768px) {
+            .container {
+              flex-direction: column; /* Stacks content on smaller screens */
+              text-align: center;
+            }
+      
+            .image, .info {
+              max-width: 100%;
+            }
+          }
+      
+          .container1 {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px;
+              gap: 10px;
+              max-width: 1200px;
+              margin: auto;
+              flex-wrap: wrap; /* Makes it responsive */
+            }
+        
+            .info1 {
+              flex: 2;
+              max-width: 600px;
+            }
+        
+            .info1 h1 {
+              margin-top: 0;
+              font-size: 2rem;
+              color: #333;
+            }
+        
+            .info1 p {
+              font-size: 1rem;
+              line-height: 1.6;
+              color: #555;
+            }
+        
+            .image1 {
+              flex: 1;
+              
+            }
+        
+            .image1 img {
+              width: 100%;
+              height: auto;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            @media (max-width: 768px) {
+              .container1 {
+                flex-direction: column-reverse; /* Stacks image below text on smaller screens */
+                text-align: center;
+              }
+        
+              .info1, .image1 {
+                max-width: 100%;
+              }
+            }
+
+        .header {
+            text-align: center;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #333;
+            margin: 40px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #DDD;
+            border-bottom: 1px solid #DDD;
+            padding: 15px 0;
+            background-color: #FAF9F5;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            margin: 0 20px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 0 20px;
+            background-color: #e8ece6;
+        }
+
+        .content h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .content h3 {
+          font-family: 'Libre Baskerville', serif;
+          font-size: 1.9rem;
+          font-weight: 400;
+          color: #333;
+          margin-bottom: 30px;
+      }
+
+        .content img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .content p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin: 20px auto;
+            max-width: 700px;
+            color: #555;
+        }
+
+        .additional-content {
+            margin: 40px auto;
+            max-width: 950px;
+            padding: 0 20px;
+        }
+
+        .photogallery{
+            margin: 40px auto;
+            
+            padding: 0 20px;
+        }
+        
+        .photogallery h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+
+        .additional-content h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .photo-text-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        .photo-text-item {
+            width: calc(33% - 20px);
+            text-align: center;
+        }
+
+        .photo-text-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .photo-text-item img {
+            max-width: 100%;
+            height: 80%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-text-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-text-item p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Footer Styles */
+.footer {
+  background-color: #072540;
+  color: #fff;
+  padding-top: -20rem;
+ 
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-logo h2 {
+    padding-bottom: 0.5rem;
+  color: #FFC72C;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.social-links a {
+  margin-right: 10px;
+  padding: 0.7rem;
+  color: #fff;
+  font-size: 3rem;
+  justify-content: space-evenly;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #FFC72C;
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  color: #FF6F61;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #FFC72C;
+}
+
+.footer-bottom {
+    align-items: center;
+  text-align: center;
+  
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-bottom .heart {
+  color: #FF6F61;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+}
+        #infoSec{
+            background-color: #ffffff;
+            text-align: center;
+            font-size: 10rem;
+            border-radius: 5rem;
+        }   
+    </style>
+</head>
+<br>
+
+    <div class="header">A Land of Monasteries, Glaciers, and Timeless Adventures</div>
+
+    
+
+    <div class="content">
+        <h2>Zanskar Valley</h2>
+        <a href="Your Gateway to Himalayan Adventures">
+            <img src="./Image/" alt="Paris skyline">
+        </a>
+        <p>
+    Zanskar Valley: A Hidden Paradise in the Himalayas located in the remote corners of Ladakh, It is a breathtaking destination known for its rugged mountains, pristine rivers, and ancient monasteries. Located at an altitude of over <b>12,000 feet</b>, this valley is a paradise for adventure seekers, trekkers, and nature lovers. In winter, Zanskar transforms into a frozen wonderland, famous for the Chadar Trek, where travelers walk over the frozen Zanskar River. In summer, the valley blooms with stunning landscapes, offering opportunities for trekking, rafting, and exploring charming villages. With its untouched beauty and peaceful atmosphere, It is a must-visit for those looking to experience the raw and mystical charm of the Himalayas.</p>
+    </div>
+
+    <div class="additional-content">
+        <h3>Destinations To Explore</h3>
+        <div class="photo-text-container">
+            <div class="photo-text-item">
+                <a href="#section1">
+                    <img src="./Image/Sissu Waterfall.jpg" alt="Mud">
+                </a>
+                <p>Sissu Lake and Waterfall</p>
+            </div>
+            <div class="photo-text-item">
+              <a href="#section2">
+                  <img src="./Image/Atal Tunnel.jpeg" alt="Mud">
+              </a>
+              <p>Atal Tunnel</p>
+          </div>
+          <div class="photo-text-item">
+            <a href="#section3">
+                <img src="./Image/Lahaul Valley.jpg" alt="Mud">
+            </a>
+            <p>Lahaul Valley</p>
+        </div>
+        <div class="photo-text-item">
+          <a href="#section4">
+              <img src="./Image/Shinkhula Top.jpg" alt="Mud">
+          </a>
+          <p>Shinkhula Top</p>
+      </div>
+      <div class="photo-text-item">
+        <a href="#section5">
+            <img src="./Image/Gomba Mountain.jpg" alt="Mud">
+        </a>
+        <p>Gombo Rangjum Mountain</p>
+    </div>
+    <div class="photo-text-item">
+      <a href="#section6">
+          <img src="./Image/Purney.jpg" alt="Mud">
+      </a>
+      <p>Purney</p>
+  </div>
+  <div class="photo-text-item">
+    <a href="#section7">
+        <img src="./Image/Phutgal Monestry.jpg" alt="Mud">
+    </a>
+    <p>Phutgal Monestry</p>
+</div>
+  <div class="photo-text-item">
+    <a href="#section8">
+        <img src="./Image/Padum.JPG" alt="Mud">
+    </a>
+    <p>Padum</p>
+</div>
+<div class="photo-text-item">
+    <a href="#section9">
+        <img src="./Image/Manali.jpg" alt="Mud">
+    </a>
+    <p>Manali</p>
+    </div>
+    </div>
+</div>
+    <div class="content" id="section1">
+        <h3>Sissu Waterfall: A Hidden Himalayan Gem</h3>
+        <a href="paris.html">
+            <img src="./Image/Sissu Waterfall.jpg" alt="Paris skyline">
+        </a>
+        <p>Nestled in the breathtaking Lahaul Valley of Himachal Pradesh, It is a mesmerizing natural wonder that captivates travelers with its sheer beauty and serenity. Also known as Palden Lhamo Dhara, this stunning waterfall cascades down from towering cliffs, creating a spectacular sight against the backdrop of the mighty Himalayas.
+        <b>Sissu Lake</b> is a tranquil high-altitude lake that mesmerizes visitors with its crystal-clear waters and breathtaking Himalayan backdrop. Located near Sissu village on the Manali-Leh Highway, this lake is a must-visit destination for travelers heading toward Ladakh or Zanskar Valley.
+        </p>
+    </div>
+    <div class="content" id="section2">
+      <h3>Atal Tunnel: A Gateway to the Majestic Himalayas
+      </h3>
+      <a href="paris.html">
+          <img src="./Image/Atal Tunnel.jpeg" alt="Paris skyline">
+      </a>
+      <p> The Atal Tunnel, an engineering marvel at 10,000 feet, is the world’s longest highway tunnel above this altitude, stretching 9.02 km beneath the Himalayas. Connecting Manali to Lahaul-Spiti Valley, it reduces travel distance by 46 km and cuts travel time by 4-5 hours providing year-round access to Lahaul previously cut off during winters. This tunnel not only serves as a key gateway to Zanskar Valley and other Himalayan destinations but also offers a breathtaking drive with stunning views of snow-capped peaks. Open year-round, the Atal Tunnel has transformed the region into an adventure hub, making it a must visit for travelers exploring the Indian Himalayas.</p>
+  </div>
+  <div class="content" id="section3">
+    <h3>Lahaul Valley: Where Beauty, Culture, and Adventure Unite</h3>
+    <a href="paris.html">
+        <img src="./Image/Lahaul Valley.jpg" alt="Paris skyline">
+    </a>
+    <p>Lahaul Valley, nestled in the remote reaches of Himachal Pradesh, is a hidden gem known for its raw natural beauty and rich cultural heritage. Separated from the rest of the region by towering mountains, Lahaul is most famous for the Atal Tunnel, a remarkable feat of engineering that connects it to Manali year-round, making it accessible even during the harsh winter months. The valley's rugged terrains, glacial rivers, and picturesque alpine lakes create an awe-inspiring landscape perfect for trekkers and photographers. Lahaul is home to ancient monasteries, vibrant Tibetan influences, and traditional Himalayan villages, giving visitors a glimpse into the unique Buddhist culture that thrives in the area. With opportunities for adventure sports like trekking, mountain biking, and wildlife exploration, Lahaul Valley offers an unforgettable experience for those seeking both serenity and excitement in the heart of the Indian Himalayas.    </p>
+</div>
+<div class="content" id="section4">
+  <h3>Shinkhula Top: The Majestic Himalayan Pass  </h3>
+  <a href="paris.html">
+      <img src="./Image/Shinkhula Top.jpg" alt="Paris skyline">
+  </a>
+  <p> It is one of the highest and most challenging mountain passes in the Lahaul Valley of Himachal Pradesh, located at an altitude of 16,500 feet (5,029 meters). This remote and rugged pass connects the Lahaul Valley to Zanskar Valley in Ladakh, offering stunning panoramic views of the surrounding snow-capped peaks and pristine valleys. The ideal time to trek to Shinkhula Pass is during the summer months from June to September, when the snow has melted, and the trails are more accessible. Winter treks are possible for the most experienced trekkers, but they are incredibly challenging due to heavy snow. The trek to Shinkhula involves challenging altitude gain, rough trails, and unpredictable weather conditions, making it a true adventure for those seeking to explore the heart of the Himalayas.  </p>
+</div>
+<div class="content" id="section5">
+  <h3>Gombo Rangjum Mountain</h3>
+  <a href="paris.html">
+      <img src="./Image/Gomba Mountain.jpg" alt="Paris skyline">
+  </a>
+  <p> Gombo Rangjum Mountain, standing at 6,240 meters in the Lahaul Valley, is a remote and challenging peak located in the Zanskar Range of the Himalayas. Known for its rugged ascent, this mountain attracts experienced mountaineers and trekkers seeking a thrilling adventure off the beaten path. The peak offers breathtaking panoramic views of surrounding snow-capped mountains, valleys, and the pristine landscape below. Key attractions in the area include the stunning Zanskar Valley, known for its dramatic landscapes, and the remote Tindi and Darcha villages, which serve as trekking bases. Visitors can also explore the Phugtal Monastery, perched high on a cliff in the Zanskar Valley, adding a spiritual touch to the adventure. Travelers visit Gombo Rangjum Mountain not only to challenge themselves with its technical climbs but also to experience the untouched beauty and peace of the Himalayan wilderness, far from the crowds of more popular destinations. The region is rich in high-altitude flora and fauna, including rare species like the snow leopard and Himalayan ibex, making it an unforgettable journey for nature enthusiasts and adventure seekers alike. The journey to the peak also offers star-casting views, where trekkers can witness crystal-clear skies and stunning night skies filled with stars, making it a truly magical experience for those who seek tranquility under the Himalayan stars.  </p>
+</div>
+<div class="content" id="section6">
+  <h3>Purney: A Tranquil Tibetan Village in the Heart of Zanskar </h3>
+  <a href="paris.html">
+      <img src="./Image/Purney.jpg" alt="Paris skyline">
+  </a>
+  <p>
+Purney Village, located in the remote Zanskar Valley, is a peaceful and picturesque village known for its stunning landscapes and traditional Tibetan Buddhist culture. Situated at a high altitude, this village is surrounded by towering snow-capped peaks, lush valleys, and gushing rivers, offering a serene atmosphere and breathtaking views. Purney is home to several ancient monasteries and traditional stone houses, reflecting the rich cultural heritage of the region. The village is accessible via trekking routes from Padum and serves as a tranquil stop for those exploring the rugged beauty of Zanskar Valley. Its isolation and pristine environment make it a perfect destination for travelers seeking peace, natural beauty, and cultural immersion.  </p>
+</div>
+<div class="content" id="section7">
+  <h3>Phugtal Monestry : Where Adventure Meets Spirituality </h3>
+  <a href="paris.html">
+      <img src="./Image/Phutgal Monestry.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Phugtal Monastery, located in the remote Zanskar Valley of Ladakh, is one of the most unique and stunning monasteries in the region, perched high on a cliff and built in a cave-like structure. With its whitewashed walls and traditional Tibetan architecture blending seamlessly into the rugged landscape, it is one of the most revered Buddhist sites in Zanskar and is associated with the Gelugpa school of Tibetan Buddhism. Founded by Phugtal Rinpoche in the 12th century, it has become an important center for meditation and monastic life. The monastery is accessible only by foot, making the trek to Phugtal a thrilling adventure that takes several days from Padum, offering picturesque views of the Zanskar River and surrounding valleys. It is not only a place of religious significance but also a center of learning, where monks engage in religious studies and meditation. The complex includes prayer rooms, living quarters, and a manuscript library, all nestled into the cliffside, making it an architectural marvel. The peaceful surroundings, breathtaking views, and rich spiritual history of Phugtal Monastery make it a must-visit for those exploring the spiritual heart of Zanskar.  </p>
+</div>
+<div class="content" id="section8">
+  <h3>Padum and Tibetan Villges </h3>
+  <a href="paris.html">
+      <img src="./Image/Padum.JPG" alt="Paris skyline">
+  </a>
+  <p>
+    Padum is the main town in Zanskar Valley, serves as the administrative and cultural heart of the region, surrounded by snow-capped peaks, rivers, and valleys. At an altitude of about 3,600 meters, it is a gateway for trekkers heading to famous destinations like Phugtal Monastery. The town is known for its Buddhist monasteries, traditional Tibetan architecture, and vibrant local life, with markets offering Zanskari handicrafts and Tibetan goods. The nearby Tibetan villages, such as Zangla, Purney, and Nirang, are characterized by stone houses, monasteries, and prayer flags, and offer a glimpse into the spiritual and cultural practices of the locals. These villages maintain ancient traditions and are deeply influenced by Tibetan Buddhism. With their tranquil atmosphere, stunning landscapes, and cultural richness, these villages provide a perfect setting for those seeking spiritual solace and a deeper understanding of the region’s heritage.  </p>
+</div>
+<div class="content" id="section9">
+  <h3>Manali: Your Gateway to Himalayan Adventures </h3>
+  <a href="paris.html">
+      <img src="./Image/Manali.jpg" alt="Paris skyline">
+  </a>
+  <p>
+    Manali is a popular hill station in Himachal Pradesh's Kullu Valley, is known for its stunning natural beauty, adventure activities, and vibrant culture. Surrounded by snow-capped peaks, lush valleys, and the Beas River, it offers a perfect blend of relaxation and adventure. Visitors can explore attractions like the Hadimba Temple, Manu Temple, and Solang Valley, which is famous for paragliding, skiing, and trekking. Rohtang Pass, a short distance from the town, provides breathtaking views of the Himalayas. The town is also a hub for adventure tourism, offering activities like river rafting, mountain biking, and trekking. In winter, Manali transforms into a snow-covered paradise, making it a popular destination for skiing and snowboarding. Additionally, it serves as a gateway to remote regions like Leh-Ladakh and Spiti Valley, attracting trekkers and backpackers seeking offbeat adventures.  </p>
+</div>
+
+<div class="container">
+    <div class="image">
+      <img src="./Image/Map.webp" alt="Sample Image">
+    </div>
+    <div class="info">
+        <div class="content" id="infoSec">
+            <h3>Zanskar Valley Itinerary</h3>
+            <a href="paris.html">
+                
+            </a>
+            <p>Here’s a typical itinerary for exploring Zanskar, starting and ending in Delhi.<br>
+              </p>
+              
+                  <p style="text-align:justify;"> 
+                      Day 1 | : Hometown to Delhi via train (as per your package)<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 2 | : Reach Delhi & overnight journey from Delhi to Manali<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 3 | : Reach & Manali to Sissu/Jispa (90 km/3 hours)<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 4 | : Sissu to Purne Via Mount Gonbo Rangjan & Darcha<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 5 | : Purne – phugtal monastery – Padum (treak approx 3 hour)<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 6 | : Padum Local(50 km/2 Hours) (A whole day for padum local)<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 7 | : Padum to Gombo (190 km/ 5 Hours)<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 8 | : Gombo to Sissu/Manali & Start journey towards Delhi (105km/ 4 Hour)<br>
+                      ---------|----------------------------------------------------------------------------------------<br>
+                      Day 9 | : Reach Delhi & departure towards your hometown.<br>
+                                                                                                                           <br>
+                  </p>
+              
+             
+          
+          
+          </div>
+    </div>
+  </div>
+  <div class="container1">
+    <div class="info1">
+        <div class="content" id="infoSec">
+            <h3>Best time to visit Zanskar Valley</h3>
+            <a href="paris.html">
+               
+            </a>
+            <p>
+            <br>The best time to visit Zanskar Valley is during the summer months from June to September. During this period, the weather is relatively mild, and most of the roads, including the Atal Tunnel, are accessible, allowing easy travel to the valley. The trekking routes and scenic spots like Sissu Lake, Shinkhula Pass, and Padum are open, offering breathtaking views of the valley's snow-capped peaks, rivers, and monasteries.
+        <br>- June to August: Ideal for trekking and outdoor activities, as the weather is warm enough for comfortable exploration. </br>
+            - September: The end of the tourist season with beautiful autumn colors and cooler temperatures, still good for trekking.</br>
+            - May: A peaceful time to visit, just before the peak season. The valley begins to thaw, offering early access to trekking routes and scenic spots. The cool weather, snow-capped peaks, and blooming spring flora make for a serene experience, with fewer crowds and a fresh, untouched atmosphere.</br>
+            Avoid visiting during the winter months (November to March) when heavy snow and extreme cold make most routes inaccessible and challenging, though the valley's winter scenery is stunning for those seeking solitude and adventure.<br>
+          </p>
+          </div>
+          
+    </div>
+    <div class="image1">
+      <img src="beach2.jpg" alt="Sample Image">
+    </div>
+  </div>
+  
+  <div class="photogallery">
+    <h3>Photo Gallery</h3>
+    <div class="photo-text-container">
+        <div class="photo-text-item">
+                <img src="./Photo Gallery/Image 1.jpg" alt="Mud">
+            </a>
+        </div>
+        <div class="photo-text-item">
+              <img src="./Photo Gallery/Image 6.jpg" alt="Mud">
+          </a>
+      </div>
+      <div class="photo-text-item">
+            <img src="./Photo Gallery/Image 3.jpg" alt="Mud">
+        </a>
+    </div>
+    <div class="photo-text-item">
+          <img src="./Photo Gallery/Image 5.jpg" alt="Mud">
+      </a>
+  </div>
+  <div class="photo-text-item">
+        <img src="./Photo Gallery/Image 4.jpg" alt="Mud">
+    </a>
+</div>
+<div class="photo-text-item">
+      <img src="./Photo Gallery/Image 2.jpg" alt="Mud">
+  </a>
+</div>
+<div class="photo-text-item">
+    <img src="./Photo Gallery/Image 8.jpg" alt="Mud">
+</a>
+</div>
+        <div class="photo-text-item">
+                <img src="./Photo Gallery/Image 7.jpg" alt="Cityscape">
+            </a>
+        </div>
+        <div class="photo-text-item">
+                <img src="./Photo Gallery/Image.jpg" alt="Mountain view">
+            </a>
+        </div>
+    </div>
+    
+</div>
+
+    <!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Logo and Social Links -->
+      <div class="footer-logo" >
+        <h2>The Wander Compass</h2>
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/reel/C7q3J8HoB6u/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#">How to start a travel blog</a></li>
+          <li><a href="#">Travel blog name ideas</a></li>
+          <li><a href="#">Travel Quotes</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Plan your trip</a></li>
+
+
+          <li><a href="#">Work with us</a></li>
+          <li><a href="#">Write for us</a></li>
+        </ul>
+      </div>
+
+      
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p >
+        Copyright © 2025 <strong>The Wander Compass</strong> – Designed with ❤️ by Travel Enthusiasts.| <strong>All Rights Reserved</strong>
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
