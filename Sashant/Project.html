@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Konkan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+          font-family: 'Open Sans', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #ffffff;
+          color: #333;
+          line-height: 1.6;
+      }
+      .container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          gap: 20px;
+          max-width: 1200px;
+          margin: auto;
+          flex-wrap: wrap; /* Makes it responsive */
+        }
+    
+        .image {
+          flex: 1;
+         
+        }
+    
+        .image img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .info {
+          flex: 2;
+          max-width: 600px;
+        }
+    
+        .info h1 {
+          margin-top: 0;
+          font-size: 2rem;
+          color: #333;
+        }
+    
+        .info p {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #555;
+        }
+    
+        @media (max-width: 768px) {
+          .container {
+            flex-direction: column; /* Stacks content on smaller screens */
+            text-align: center;
+          }
+    
+          .image, .info {
+            max-width: 100%;
+          }
+        }
+    
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            gap: 10px;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap; /* Makes it responsive */
+          }
+      
+          .info1 {
+            flex: 2;
+            max-width: 600px;
+          }
+      
+          .info1 h1 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: #333;
+          }
+      
+          .info1 p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+          }
+      
+          .image1 {
+            flex: 1;
+            
+          }
+      
+          .image1 img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+      
+          @media (max-width: 768px) {
+            .container1 {
+              flex-direction: column-reverse; /* Stacks image below text on smaller screens */
+              text-align: center;
+            }
+      
+            .info1, .image1 {
+              max-width: 100%;
+            }
+          }
+
+      .header {
+          text-align: center;
+          font-family: 'Libre Baskerville', serif;
+          font-size: 2rem;
+          font-weight: 400;
+          color: #333;
+          margin: 40px 0;
+      }
+
+      .navbar {
+          display: flex;
+          justify-content: center;
+          border-top: 1px solid #DDD;
+          border-bottom: 1px solid #DDD;
+          padding: 15px 0;
+          background-color: #FAF9F5;
+      }
+
+      .navbar a {
+          text-decoration: none;
+          font-family: 'Open Sans', sans-serif;
+          color: #333;
+          margin: 0 20px;
+          font-size: 1rem;
+          font-weight: 600;
+      }
+
+      .navbar a:hover {
+          text-decoration: underline;
+      }
+
+      .content {
+          text-align: center;
+          margin: 40px auto;
+          max-width: 900px;
+          padding: 0 20px;
+          background-color: #e8ece6;
+      }
+
+      .content h2 {
+          font-family: 'Libre Baskerville', serif;
+          font-size: 2.8rem;
+          font-weight: 400;
+          color: #333;
+          margin-bottom: 30px;
+      }
+
+      .content h3 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.9rem;
+        font-weight: 400;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+      .content img {
+          max-width: 50%;
+          height: auto;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          border-radius: 8px;
+      }
+
+      .content p {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1.1rem;
+          font-weight: 400;
+          margin: 20px auto;
+          max-width: 700px;
+          color: #555;
+      }
+
+      .additional-content {
+          margin: 40px auto;
+          max-width: 950px;
+          padding: 0 20px;
+      }
+
+      .photogallery{
+          margin: 40px auto;
+          
+          padding: 0 20px;
+      }
+      
+      .photogallery h3 {
+          font-family: 'Libre Baskerville', serif;
+          font-size: 2rem;
+          font-weight: 400;
+          margin-bottom: 20px;
+          text-align: center;
+      }
+
+
+      .additional-content h3 {
+          font-family: 'Libre Baskerville', serif;
+          font-size: 2rem;
+          font-weight: 400;
+          margin-bottom: 20px;
+          text-align: center;
+      }
+
+      .photo-text-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 5px;
+      }
+
+      .photo-text-item {
+          width: calc(33% - 20px);
+          text-align: center;
+      }
+
+      .photo-text-item a {
+          text-decoration: none;
+          color: inherit;
+      }
+
+      .photo-text-item img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          transition: transform 0.3s ease;
+      }
+
+      .photo-text-item img:hover {
+          transform: scale(1.05);
+      }
+
+      .photo-text-item p {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1rem;
+          text-align: center;
+          margin: 0;
+      }
+
+      /* Footer Styles */
+.footer {
+background-color: #072540;
+color: #fff;
+padding-top: -20rem;
+
+}
+
+.footer .container {
+max-width: 1200px;
+margin: auto;
+}
+
+.footer-content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 20px;
+}
+
+.footer-logo h2 {
+  padding-bottom: 0.5rem;
+color: #FFC72C;
+font-size: 2.5rem;
+margin: 0;
+}
+
+.footer-logo p {
+font-size: 0.9rem;
+color: #aaa;
+}
+
+.social-links a {
+margin-right: 10px;
+padding: 0.7rem;
+color: #fff;
+font-size: 3rem;
+justify-content: space-evenly;
+transition: color 0.3s;
+}
+
+.social-links a:hover {
+color: #FFC72C;
+}
+
+.footer-column h3 {
+font-size: 1.1rem;
+color: #FF6F61;
+margin-bottom: 10px;
+}
+
+.footer-column ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-column ul li {
+margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+color: #aaa;
+text-decoration: none;
+font-size: 0.9rem;
+transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+color: #FFC72C;
+}
+
+.footer-bottom {
+  align-items: center;
+text-align: center;
+
+font-size: 0.9rem;
+color: #aaa;
+}
+
+.footer-bottom .heart {
+color: #FF6F61;
+}
+
+@media (max-width: 768px) {
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-column {
+  text-align: center;
+}
+}
+
+
+      .cookie-banner {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          background-color: #FFF;
+          border-top: 1px solid #DDD;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          font-size: 0.9rem;
+          color: #555;
+      }
+
+      .cookie-banner button {
+          background-color: #007BFF;
+          color: #FFF;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 3px;
+          cursor: pointer;
+          font-size: 0.9rem;
+          font-family: 'Open Sans', sans-serif;
+      }
+
+      .cookie-banner button:hover {
+          background-color: #0056b3;
+      }
+
+      #infoSec{
+          background-color: #ffffff;
+          text-align: center;
+          font-size: 10rem;
+          border-radius: 5rem;
+      }
+
+      
+     
+  </style>
+</head>
+<br>
+
+    <div class="header">Discover Konkan - India's Coastal Paradise</div>
+
+    <div class="content">
+        <h2>Welcome to Konkan</h2>
+        <a>
+            <img src="./Images/Konkan Beach.jpg" alt="Paris skyline">
+        </a>
+        <p style="text-align:justify;">
+            The Konkan region is a breathtaking stretch along India's western coastline, 
+            known for its stunning beaches, vibrant marine life, and lush green landscapes. It encompasses 
+            parts of Maharashtra, Goa, and Karnataka, offering a perfect blend of natural beauty, cultural
+             heritage, and culinary delights.
+        </p>
+    </div>
+
+    <div class="additional-content">
+        <h3>Top Attractions in Konkan</h3>
+        <div class="photo-text-container">
+            <div class="photo-text-item">
+                <a href="#section1">
+                    <img src="./Images/Ganpatipule.jpg" alt="Ganpatipule Beach">
+                    <p><strong>Ganpatipule</strong></p>
+                </a>
+            </div>
+            <div class="photo-text-item">
+              <a href="#section2">
+                  <img src="./Images/Ratnagiri.jpg" alt="Ratnagiri Fort">
+                  <p><strong>Ratnagiri</strong></p>
+              </a>
+          </div>
+          <div class="photo-text-item">
+            <a href="#section3">
+                <img src="./Images/SF.jpg" alt="Sindhudurg Fort">
+                <p><strong>Sindhudurg Fort</strong></p>
+            </a>
+        </div>
+        <div class="photo-text-item">
+          <a href="#section4">
+              <img src="./Images/alibag-beach.jpg" alt="Alibaug Beach">
+              <p><strong>Alibaug Beach</strong></p>
+          </a>
+      </div>
+      <div class="photo-text-item">
+        <a href="#section5">
+            <img src="./Images/VB.avif" alt="Vengurla Beach">
+            <p><strong>Vengurla Beach</strong></p>
+        </a>
+    </div>
+    <div class="photo-text-item">
+      <a href="#section6">
+          <img src="./Images/Diveagar Beach.jpg" alt="Diveagar Beach">
+          <p><strong>Diveagar Beach</strong></p>
+      </a>
+  </div>
+  <div class="content" id="section1">
+        <h3>Ganpatipule Beach: A Slice of Paradise</h3>
+        <a>
+            <img src="./Images/Ganpatipule.jpg" alt="Ganpatipule Beach">
+        </a>
+        <p style="text-align:justify;">
+            The first stop was Ganpatipule Beach, a pristine stretch of golden sand bordered 
+            by clear blue waters. Unlike the crowded beaches of Goa, this one was tranquil and untouched. 
+            I spent hours walking barefoot along the shore, feeling the waves gently lap at my feet.
+            What makes this beach unique is the fusion of natural beauty and spiritual ambiance, 
+            as it is located right next to the famous Swayambhu Ganpati Temple. Watching the sunset here 
+            was a magical experience – the sky transformed into a canvas of orange, pink, and purple hues, 
+            mirrored beautifully by the calm sea.
+            Ganpatipule is best known for the Swayambhu Ganpati Temple, which houses a naturally formed 
+            idol of Lord Ganesh. The temple, facing the Arabian Sea, exudes a serene vibe that’s hard to 
+            put into words. As the rhythmic chants of devotees filled the air, I felt an overwhelming sense
+            of peace.
+        </p>
+    </div>
+    <div class="content" id="section2">
+      <h3>Ratnagiri: A Konkan Gem</h3>
+      <a>
+          <img src="./Images/Ratnagiri.jpg" alt="Ratnagiri">
+      </a>
+      <p style="text-align:justify;">
+          The journey to Ratnagiri was a scenic delight, with winding roads surrounded by 
+          dense greenery and the occasional sight of rivers flowing toward the sea. Located approximately 
+          350 km from Mumbai, Ratnagiri is easily accessible by road and rail, making it a perfect destination 
+          for a short getaway.
+          Nestled along the pristine Konkan coastline of Maharashtra, Ratnagiri is a treasure trove of 
+          natural beauty, history, and culture. From its serene beaches to ancient forts, lush green hills, 
+          and delectable seafood, Ratnagiri offers an unforgettable travel experience. Here’s a glimpse of my 
+          journey through this enchanting town.
+      </p>
+  </div>
+  <div class="content" id="section3">
+    <h3>Sindhudurg Fort: A Majestic Sea Fort on the Konkan Coast</h3>
+    <a>
+        <img src="./Images/SF.jpg" alt="Sindhudurg Fort">
+    </a>
+    <p style="text-align:justify;">
+        Perched on an island off the pristine Konkan coastline of Maharashtra, 
+        Sindhudurg Fort is a magnificent testament to the Maratha Empire’s maritime legacy. 
+        Built by the legendary Chhatrapati Shivaji Maharaj in the 17th century, this sea fort is not 
+        just a historical landmark but also a marvel of ancient engineering. Here’s a glimpse of my 
+        unforgettable journey to Sindhudurg Fort.
+        The adventure began at Malvan, a charming coastal town that serves as the gateway to Sindhudurg Fort. 
+        I boarded a ferry from Malvan Jetty, and as the boat made its way through the turquoise waters of 
+        the Arabian Sea, the fort’s imposing walls gradually came into view. The sight of the fort standing 
+        tall against the backdrop of the endless ocean was nothing short of awe-inspiring.
+    </p>
+</div>
+<div class="content" id="section4">
+  <h3>Alibaug Beach: The Coastal Charm of Maharashtra</h3>
+  <a>
+      <img src="./Images/alibag-beach.jpg" alt="Alibaug Beach">
+  </a>
+  <p style="text-align:justify;">
+      Located just a few hours from Mumbai, Alibaug Beach is a popular getaway for city 
+      dwellers seeking a refreshing break by the sea. Known for its serene beauty, historical forts, and 
+      vibrant local culture, Alibaug offers an ideal mix of relaxation and adventure. Here’s a glimpse into 
+      my delightful journey to Alibaug Beach.
+      The main attraction, Alibaug Beach, welcomed me with its vast stretch of golden sand and calm waters.
+      Unlike the crowded beaches of urban areas, this beach had a peaceful vibe. I spent my time walking
+      barefoot along the shore, collecting seashells, and watching the waves gently kiss the sand.
+      One of the highlights of Alibaug Beach is the stunning view of the Kolaba Fort, located a short 
+      distance offshore. At low tide, you can walk to the fort, while high tide requires a quick boat ride. 
+      The sight of the fort silhouetted against the evening sky was truly mesmerizing.
+  </p>
+</div>
+<div class="content" id="section5">
+  <h3>Vengurla Beach: A Tranquil Escape in Maharashtra’s Konkan Region</h3>
+  <a>
+      <img src="./Images/VB.avif" alt="Vengurla Beach">
+  </a>
+  <p style="text-align:justify;">
+      Tucked away in the serene Konkan region of Maharashtra, Vengurla Beach is a slice
+      of paradise that remains relatively untouched by commercial tourism. With its pristine sands, 
+      azure waters, and lush greenery, this beach offers the perfect escape for those seeking peace 
+      and solitude. My journey to Vengurla was nothing short of magical, and here’s a glimpse into my experience.
+      Arriving at Vengurla Beach felt like stepping into a postcard. The beach’s soft golden sands stretched 
+      endlessly, meeting the crystal-clear waters of the Arabian Sea. Unlike the crowded beaches of Goa, 
+      Vengurla Beach was tranquil, with only a handful of visitors. I spent hours walking along the shore, 
+      collecting seashells, and listening to the soothing sound of waves crashing against the sand.
+  </p>
+</div>
+<div class="content" id="section6">
+  <h3>Diveagar Beach: A Serene Retreat on Maharashtra’s Coastline</h3>
+  <a>
+      <img src="./Images/Diveagar Beach.jpg" alt="Diveagar Beach">
+  </a>
+  <p style="text-align:justify;">
+      Nestled along the Konkan coast of Maharashtra, Diveagar Beach is a tranquil escape 
+      for those yearning for a blend of natural beauty and cultural richness. Known for its pristine sands, 
+      lush greenery, and the soothing sound of waves, Diveagar offers an idyllic getaway for families, 
+      couples, and solo travelers alike. Here’s a glimpse into my memorable journey to this coastal haven.
+      Diveagar is conveniently located approximately 170 km from Mumbai and 160 km from Pune, making it an 
+      ideal weekend destination. I chose to drive down from Pune, enjoying the scenic route filled with 
+      winding roads, verdant hills, and glimpses of the sea. Alternatively, travelers can reach Diveagar
+      via the nearest railway station at Mangaon (45 km away) or by state transport buses and private cabs.
+  </p>
+</div>
+
+<div class="container">
+    <div class="image">
+      <img src="./Images/Konkan Mini Map.webp" alt="Animated Image">
+    </div>
+    <div class="info">
+        <div class="content" id="infoSec">
+            <h3>Konkan Itinerary</h3>
+            <p style="text-align:justify;">Konkan Itinerary
+              Here is a glimpse of a most-common itinerary for Konkan assuming you start at Ganpatipule and end in Alibaug Beach .<br>
+              </p>
+              
+                  <p style="text-align:justify;"> 
+                      Day 1 | : Ganpatipule : - Visit Ganapati Temple<br>
+                      ---------|-------------------------------------------------------------------<br>
+                      Day 2 | : Ratnagiri : - Visit Ratnagiri Fort<br>
+                      ---------|-------------------------------------------------------------------<br>
+                      Day 3 | :  Head to Malvan for Sindhudurg Fort<br>
+                      ---------|-------------------------------------------------------------------<br>
+                      Day 4 | : Visit Vengurla Beach <br>
+                      ---------|-------------------------------------------------------------------<br>
+                      Day 5 | :  Enjoy a peaceful atmosphere<br>
+                      ---------|-------------------------------------------------------------------<br>
+                      Day 6 | : Visit Alibaug Beach<br>
+                      ---------|-------------------------------------------------------------------<br>
+                  </p>
+          </div>
+    </div>
+  </div>
+  <div class="container1">
+    <div class="info1">
+        <div class="content" id="infoSec">
+            <h3 id="B2">Best time to visit Konkan</h3>
+            </a>
+            <p style="text-align:justify;">
+            The best time to visit Konkan is during the winter and early summer months (October to March) 
+            when the weather is pleasant and suitable for exploring beaches, forts, and temples.<br>
+            <strong><b style="text-align:center;">Winter (October to February)</b></strong><br>
+            <b>Weather:</b>Cool and pleasant with temperatures ranging from 15°C to 25°C.<br>
+            <b>Pros:</b>
+            Ideal for sightseeing, water sports, and beach activities.
+            Lush greenery remains fresh after the monsoon season.<br>
+            Festivals like Diwali, Ganesh Chaturthi (if it falls in this season), and Christmas 
+            bring cultural vibrance.<br>
+            <b>Best For:</b> Families, couples, and adventure seekers.<br>
+            <strong><b>Early Summer (March to Mid-April)</b></strong><br>
+            <b>Weather:</b> Slightly warmer but still manageable, with temperatures around 25°C to 32°C.<br>
+            <b>Pros:</b>
+            Lesser crowds compared to peak winter months.
+            Mango season begins, offering a chance to enjoy delicious Alphonso mangoes (Hapus).<br>
+            <b>Best For:</b> A peaceful getaway or culinary experiences.<br>
+            <strong><b>Monsoon (June to September)</b></strong><br>
+            <b>Weather:</b> Heavy rainfall, lush greenery, and cool temperatures.<br>
+            <b>Pros:</b>
+            Konkan transforms into a paradise with waterfalls, rivers, and scenic views.
+            Ideal for nature enthusiasts and off-season travelers seeking solitude.<br>
+            <b>Cons:</b>
+            Beaches and forts may become inaccessible.
+            Risk of landslides or heavy rains disrupting travel plans.<br>
+            <b>Best For:</b> Monsoon lovers and photographers.<br>
+          </p>
+          </div> 
+    </div>
+    <div class="image1">
+      <img src="./Images/Best time to Visit.webp" alt="Animated Image">
+    </div>
+  </div>
+<!-- Food Section Start -->
+  <div class="Food Cuisine" id="B3">
+  <h3>Food & Cuisine in Konkan</h3>
+  <div class="container">
+    <div class="image">
+      <img src="./Sindudurg Fort/Mango.webp" alt="Alphonso Mango">
+    </div>
+    <div class="info">
+      <h2>Alphonso Mangoes</h2>
+      <p style="text-align:justify;">
+        Alphonso mangoes are a popular snack in Konkan, often enjoyed during festivals and Diwali.
+        They are made from fresh mangoes, and are packed with vitamins and minerals.
+        They are also known for their unique taste and aroma.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container1">
+  <div class="info1">
+    <h2>Kokum Sherbet</h2>
+    <p style="text-align:justify;">
+      Kokum Sherbet is a refreshing and tangy drink, popular in the Konkan region.  
+      Made from kokum fruit, this traditional beverage is known for its cooling properties 
+      and digestive benefits. Perfect for hot summers, Kokum Sherbet is a blend of sweet, 
+      tangy, and slightly salty flavors that tantalize your taste buds.
+    </p>
+  </div>
+  <div class="image1">
+    <img src="./Sindudurg Fort/Kokum Sharbat.webp" alt="Glass of Kokum Sherbet" />
+  </div>
+</div>
+<div class="container">
+  <div class="image">
+    <img src="./Sindudurg Fort/Modak.jpeg" alt="Traditional Steamed Modak">
+  </div>
+  <div class="info">
+    <h2>Modak</h2>
+    <p style="text-align:justify;">
+      Modak is a traditional sweet dumpling, deeply rooted in Konkan's culinary heritage.  
+      Made from rice flour, jaggery, and freshly grated coconut, Modak is steamed or fried and often offered to Lord Ganesha during festivals like Ganesh Chaturthi.  
+      Known for its soft texture and rich, sweet filling, Modak is a favorite among locals and visitors alike.
+    </p>
+  </div>
+</div>
+<div class="container1">
+  <div class="info1">
+    <h2>Fish Curry</h2>
+    <p style="text-align:justify;">
+      Konkan-style Fish Curry is a flavorful dish made with freshly caught fish, coconut, and a blend of aromatic spices.  
+      This tangy and spicy curry often includes ingredients like tamarind, kokum, and red chilies, giving it a unique coastal flavor.  
+      Best enjoyed with steamed rice, it’s a must-try delicacy for seafood lovers visiting the Konkan region.
+    </p>
+  </div>
+  <div class="image1">
+    <img src="./Sindudurg Fort/Kokani Fish Curry.jpg" alt="Konkan Style Fish Curry" />
+  </div>
+</div>
+<div class="container">
+  <div class="image">
+    <img src="./Sindudurg Fort/Solkadhi.jpeg" alt="Glass of Solkadhi">
+  </div>
+  <div class="info">
+    <h2>Solkadhi</h2>
+    <p style="text-align:justify;">
+      Solkadhi is a traditional Konkan drink made from kokum and coconut milk, known for its refreshing and digestive properties.  
+      This tangy and mildly spiced beverage is often served as a cooling accompaniment to meals, especially with seafood.  
+      Its unique pink hue and soothing taste make it a favorite among locals and visitors alike.
+    </p>
+  </div>
+</div>
+<div class="container1">
+  <div class="info1">
+    <h2>Crab Curry</h2>
+    <p style="text-align:justify;">
+      Crab Curry is a signature dish of Konkan cuisine, made with fresh crabs, coconut, and a rich blend of spices.  
+      The curry is tangy, spicy, and infused with flavors from tamarind, kokum, and aromatic masalas.  
+      This delicious dish pairs perfectly with steamed rice or soft bread, making it a must-try for seafood lovers.
+    </p>
+  </div>
+  <div class="image1">
+    <img src="./Sindudurg Fort/MalvaniCrabCurry.jpg" alt="Konkan Style Crab Curry" />
+  </div>
+</div>
+    
+  <div class="photogallery">
+    <h3>Photo Gallery</h3>
+    <div class="photo-text-container">
+        <div class="photo-text-item">
+            <a>
+                <img src="./Ganpatipule Images/Ganpatipule Photo.jpeg" alt="Ganpati Temple">
+            </a>
+        </div>
+        <div class="photo-text-item">
+              <img src="./Ganpatipule Images/Ganpatipule Photo2.jpg" alt="Ganpatipule">
+          </a>
+      </div>
+      <div class="photo-text-item">
+        <a>
+            <img src="./Ratnagiri Photo/Ratnagiri Photo.png" alt="Ratnagiri">
+        </a>
+    </div>
+    <div class="photo-text-item">
+      <a>
+          <img src="./Ratnagiri Photo/Ratnagiti Photo1.jpg" alt="Ratnagiri">
+      </a>
+  </div>
+  <div class="photo-text-item">
+    <a>
+        <img src="./Sindudurg Fort/Sindhudurg.jpg" alt="Sindudurg Fort">
+    </a>
+</div>
+<div class="photo-text-item">
+  <a>
+      <img src="./Ratnagiri Photo/AB2.webp" alt="Alibaug Photo">
+  </a>
+</div>
+<div class="photo-text-item">
+<a>
+    <img src="./Sindudurg Fort/vengurla-beach-maharashtra-india-348662882.webp" alt="Vengurla Beach">
+</a>
+</div>
+<div class="photo-text-item">
+  <a>
+    <img src="./Sindudurg Fort/Diveagar Beach1.jpg" alt="Diveagar Beach">
+  </a>
+</div>
+<div class="photo-text-item">
+  <a>
+    <img src="./Ratnagiri Photo/DB2.webp" alt="Diveagar Beach">
+  </a>
+    </div>
+  </div>
+</div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Logo and Social Links -->
+          <div class="footer-logo" >
+            <a href=""><h2>The Wander Compass</h2></a>
+            <div class="social-links">
+                <a href="https://www.instagram.com/kokan_tourismm?igsh=MXA1Nmh6ejh4dTZ4NA==" class="fa fa-instagram"></a>
+                <a href="https://www.facebook.com/konkantourisminfoline?mibextid=ZbWKwL" class="fa fa-facebook"></a>
+                <a href="https://x.com/konkan_tourism?t=oIR22ihJsCgEmEfMq1sgkw&s=09" class="fa fa-twitter"></a>
+                <a href="https://youtu.be/SuJP2Kagr1c?si=oy6AHpQF_rz7n6GY" class="fa fa-youtube"></a>
+            </div>
+          </div>
+    
+          <!-- Resources -->
+          <div class="footer-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="https://homegrown.co.in/homegrown-explore/an-extensive-7-day-guide-to-maharashtras-konkan-coast">How to start a travel blog</a></li>
+              <li><a href="https://www.thinkific.com/blog/travel-blog-names/">Travel blog name ideas</a></li>
+              <li><a href="https://www.shutterfly.com/ideas/travel-quotes/">Travel Quotes</a></li>
+              <li><a href="https://www.spaghettitraveller.com/travel-tips/travel-blogger-faqs/">FAQ</a></li>
+            </ul>
+          </div>
+    
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#infoSec">Konkan Itinerary</a></li>
+              <li><a href="#B2">Best time to visit Konkan</a></li>
+              <li><a href="#B3">Food & Cuisine in Konkan</a></li>
+              <li><a href="#">Discover Konkan</a></li>
+            </ul>
+          </div>
+          
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <p >
+            Copyright © 2025 <strong>The Wonder Compass</strong> – Made with 
+            <span class="heart">❤</span> by us | <strong>All Rights Reserved</strong>
+          </p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
